@@ -1,0 +1,60 @@
+
+.show {
+  display: flex;
+  flex-direction: column;
+  height: 800px;
+  width: 1000px;
+  border: 1px solid #EEE;
+  margin: auto;
+  /* transition: all 0.5s ease 0s; */
+  /* transform: scale(0.98); */
+  box-shadow: rgb(0 0 0 / 13%) 2px 2px 40px;
+  //align-items: center;
+
+  //padding-top: 120px;
+
+  .toolbar {
+    height: 40px;
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    border-bottom: 1px solid #CCC;
+    background: #F7F7F7;
+    font-size: 12px;
+
+    label {
+      margin-right: 10px;
+    }
+
+    input {
+      margin-right: auto;
+      border: 1px solid #DDD;
+      padding: 5px 10px;
+      flex: 1;
+    }
+
+    button {
+      border: 1px solid #DDD;
+      border-radius: 3px;
+      padding: 7px 12px;
+      margin: 0 5px;
+      cursor: pointer;
+      background-color: #FFF;
+    }
+
+    .primary {
+      background-color: #FA6400;
+      color: #FFF;
+      font-weight: bold;
+      border: 0;
+    }
+  }
+
+
+  .designer {
+    flex: 1;
+    overflow: hidden;
+  }
+}
