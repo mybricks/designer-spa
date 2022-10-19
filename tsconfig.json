@@ -27,30 +27,7 @@
     "jsx": "react",
     "baseUrl": ".",
     "paths": {
-      "@mybricks/sdk": [
-        "../sdk/types.d.ts"
-      ],
-      "@sdk": [
-        "../desn-sdk/src/index.ts"
-      ],
-      "@utils": [
-        "../desn-sdk/src/utils/index.ts"
-      ],
-      "@mybricks/rxui": [
-        "../../rxui/types.d.ts"
-      ],
-      "@mybricks/designer-spa-base": [
-        "../for-spa-base/src"
-      ],
-      "@mybricks/comlib-core": [
-        "../../_comlibs/comlib-core/src/runtime.ts"
-      ],
-      "@mybricks/plugin-service": [
-        "../../_plugins/service/src/index.tsx"
-      ],
-      "@fangzhou/pc-editors": [
-        "../../../Kwai/pc-editors/src/index-common.ts"
-      ]
+
     }
   },
   "exclude": [

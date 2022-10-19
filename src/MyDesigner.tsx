@@ -1,6 +1,6 @@
 import React, {useCallback, useRef} from "react";
 import {message} from "antd";
-import css from "./ShowDesigner.less";
+import css from "./MyDesigner.less";
 
 import Designer from '@mybricks/designer-spa'
 
@@ -72,7 +72,7 @@ export default function MyDesigner() {
     <>
       <div className={css.show}>
         <div className={css.toolbar}>
-          <button className={css.primary} onClick={save}>保存</button>
+          <button className={css.primary} onClick={save}>保存到LocalStorage</button>
           {/*<button onClick={expotJSON}>导出</button>*/}
         </div>
         <div className={css.designer}>

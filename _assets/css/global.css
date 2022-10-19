@@ -1,0 +1,125 @@
+@charset "utf-8";
+/* 显示给用户的高光是他们成功点击的标识，以及暗示了他们点击的元素 */
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+/* 禁止复制 */
+body {
+  -webkit-overflow-scrolling: touch;
+  word-wrap: break-word;
+  word-break: break-all;
+  -webkit-user-select: none;
+  user-select: none;
+}
+/* 内外边距通常让各个浏览器样式的表现位置不同 */
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td,
+a {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* 要注意表单元素并不继承父级 font 的问题 */
+body,
+button,
+input,
+select,
+legend,
+textarea {
+  font: 14px/1.5 system-ui, -apple-system, BlinkMacSystemFont, 'PingFang SC', miui, Roboto, Helvetica Neue, Helvetica, sans-serif;
+}
+/* 表单控件样式一致 */
+button,
+input,
+optgroup,
+option,
+select,
+textarea {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  font: inherit;
+  background: 0 0;
+  border: 0;
+  outline: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+/* 默认不显示下划线，保持页面简洁 */
+a {
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+}
+/* 去掉列表前的标识 */
+ul,
+ol {
+  list-style: none;
+}
+/* 禁止 IOS 长按出现菜单 */
+img {
+  -webkit-touch-callout: none;
+}
+[class*='ant-'] [class^='ant-'],
+[class*='ant-'] [class*='ant-'],
+[class*='ant-'] [class^='ant-'] *,
+[class*='ant-'] [class*='ant-'] *,
+[class*='ant-'] [class^='ant-'] *::before,
+[class*='ant-'] [class*='ant-'] *::before,
+[class*='ant-'] [class^='ant-'] *::after,
+[class*='ant-'] [class*='ant-'] *::after {
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: 'iconfont'; /* project id 2295522 */
+  src: url('//at.alicdn.com/t/font_2295522_sn2q5rptz4f.eot');
+  src: url('//at.alicdn.com/t/font_2295522_sn2q5rptz4f.eot?#iefix')
+      format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_2295522_sn2q5rptz4f.woff2') format('woff2'),
+    url('//at.alicdn.com/t/font_2295522_sn2q5rptz4f.woff') format('woff'),
+    url('//at.alicdn.com/t/font_2295522_sn2q5rptz4f.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_2295522_sn2q5rptz4f.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: 'iconfont' !important;
+  font-size: 12px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fangzhou-theme .ant-modal-header {
+  padding: 16px 24px;
+  border-bottom: 1px solid #f0f0f0;
+}
+.fangzhou-theme .ant-modal-body {
+  padding: 24px;
+}
+.fangzhou-theme .ant-modal-footer {
+  padding: 10px 16px;
+  border-top: 1px solid #f0f0f0;
+}
