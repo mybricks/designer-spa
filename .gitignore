@@ -7,6 +7,5 @@ index.js
 tags/*
 .history
 .vscode/
-scripts/
 package-lock.json
 index.min.js
