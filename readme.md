@@ -1,6 +1,5 @@
 # 欢迎使用 @mybricks/designer-spa
 
-## 按照以下步骤体验
 
 ### 1. clone 工程
  > git clone git@github.com:mybricks/designer-spa-demo.git
