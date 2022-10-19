@@ -3,7 +3,7 @@
 ## 按照以下步骤体验
 
 ### 1. clone 工程
- > git@github.com:mybricks/designer-spa-demo.git
+ > git clone git@github.com:mybricks/designer-spa-demo.git
  >
 
 
