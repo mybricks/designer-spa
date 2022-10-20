@@ -1,11 +1,11 @@
-import {createRoot} from 'react-dom/client'
+import {render} from 'react-dom'
 
 import MyDesigner from "./MyDesigner";
 
 const rootDom = document.createElement('div')
 document.body.append(rootDom)
-createRoot(rootDom).render(
-  <MyApp/>
+render(
+  <MyApp/>, rootDom
 )
 
 
