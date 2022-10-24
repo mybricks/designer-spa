@@ -85,7 +85,7 @@ export default function MyDesigner() {
     <>
       <div className={css.show}>
         <div className={css.toolbar}>
-          <button className={css.primary} onClick={save}>保存到LocalStorage</button>
+          <button className={css.primary} onClick={save}>保存</button>
           <button onClick={preview}>预览</button>
         </div>
         <div className={css.designer}>
