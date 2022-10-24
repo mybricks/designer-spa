@@ -9,7 +9,8 @@ const outputPath = path.resolve(__dirname, `../_assets`)
 module.exports = {
   mode: 'development',
   entry: {
-    index: path.resolve(__dirname, `../src/index.tsx`)
+    index: path.resolve(__dirname, `../src/index.tsx`),
+    preview: path.resolve(__dirname, `../src/preview.tsx`)
   },
   output: {
     path: outputPath,

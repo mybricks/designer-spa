@@ -4,9 +4,8 @@ import css from "./MyDesigner.less";
 
 import Designer from '@mybricks/designer-spa'
 
-
 export default function MyDesigner() {
-  const designerRef = useRef<{ dump, dumpJSON }>()
+  const designerRef = useRef<{ dump, dumpWeb }>()
 
   const save = useCallback(() => {//保存
     const json = designerRef.current?.dump()
@@ -14,10 +13,12 @@ export default function MyDesigner() {
     message.info(`保存完成`)
   }, [])
 
-  const expotJSON = useCallback(() => {
-    const json = designerRef.current?.dumpJSON()
-    console.log(json)
-    message.info(`导出完成`)
+  const preview = useCallback(() => {
+    const json = designerRef.current?.dumpWeb()
+
+    window.localStorage.setItem('--preview--', JSON.stringify(json))
+
+    window.location.href = '/preview.html'
   }, [])
 
   const config = {
@@ -30,7 +31,19 @@ export default function MyDesigner() {
     pageContentLoader() {//加载页面内容
       const pageContent = window.localStorage.getItem('--mybricks--')
       return new Promise((resolve, reject) => {
-        resolve(pageContent ? JSON.parse(pageContent) : null)
+        let pageContent = window.localStorage.getItem('--mybricks--')
+        if (pageContent) {
+          pageContent = JSON.parse(pageContent)
+
+          resolve(pageContent)
+        } else {
+          // resolve(null)
+          // return
+          import('./demo-data.json').then(data => {
+            pageContent = JSON.parse(JSON.stringify(data))
+            resolve(pageContent)
+          })
+        }
       })
     },
     com: {
@@ -73,7 +86,7 @@ export default function MyDesigner() {
       <div className={css.show}>
         <div className={css.toolbar}>
           <button className={css.primary} onClick={save}>保存到LocalStorage</button>
-          {/*<button onClick={expotJSON}>导出</button>*/}
+          <button onClick={preview}>预览</button>
         </div>
         <div className={css.designer}>
           <Designer config={config} ref={designerRef}/>
