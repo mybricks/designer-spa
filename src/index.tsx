@@ -2,27 +2,13 @@ import {render} from 'react-dom'
 
 import MyDesigner from "./MyDesigner";
 
-const rootDom = document.createElement('div')
-document.body.append(rootDom)
 render(
-  <MyApp/>, rootDom
+  <MyApp/>, document.querySelector('#root')
 )
 
-
-export default function MyApp() {
+function MyApp() {
   return (
-    <>
-      <div style={{
-        padding: 50,
-        fontSize: 30,
-        fontWeight: 800,
-        textAlign: 'center'
-      }}>
-
-        Mybricks-SPA-Designer
-      </div>
-      <MyDesigner/>
-    </>
+    <MyDesigner/>
   )
 }
 
