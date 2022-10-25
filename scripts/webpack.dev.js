@@ -19,7 +19,9 @@ module.exports = {
     library: '[name]'
   },
   resolve: {
-    alias: {},
+    alias: {
+      //'@mybricks/render-web': path.join(__dirname, '../../render-web/src/index.tsx')
+    },
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
   externals: [{

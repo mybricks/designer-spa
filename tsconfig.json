@@ -27,7 +27,9 @@
     "jsx": "react",
     "baseUrl": ".",
     "paths": {
-
+      "@mybricks/render-web": [
+        "../render-web/src/index.tsx"
+      ]
     }
   },
   "exclude": [

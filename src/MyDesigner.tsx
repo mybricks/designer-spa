@@ -5,7 +5,7 @@ import css from "./MyDesigner.less";
 import Designer from '@mybricks/designer-spa'
 
 export default function MyDesigner() {
-  const designerRef = useRef<{ dump, dumpWeb }>()
+  const designerRef = useRef<{ dump, toJSON }>()
 
   const save = useCallback(() => {//保存
     const json = designerRef.current?.dump()
@@ -14,7 +14,7 @@ export default function MyDesigner() {
   }, [])
 
   const preview = useCallback(() => {
-    const json = designerRef.current?.dumpWeb()
+    const json = designerRef.current?.toJSON()
 
     window.localStorage.setItem('--preview--', JSON.stringify(json))
 
