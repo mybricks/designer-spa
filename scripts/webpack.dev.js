@@ -115,6 +115,12 @@ module.exports = {
             },
           }
         ]
+      },
+      {
+        test: /\.(xml|txt|html|cjs|theme)$/i,
+        use: [
+          {loader: 'raw-loader'}
+        ]
       }
     ]
   },
