@@ -6,7 +6,11 @@ import Designer from '@mybricks/designer-spa'
 
 import htmlTpt from './pub-tpt.html'
 
+//import servicePlugin from '@mybricks/plugin-connector-http'
+
+
 const config = {
+  //plugins: [servicePlugin()],
   comlibLoader(desc) {//加载组件库
     return new Promise((resolve, reject) => {
       resolve([`https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/5665_1.0.7/2022-10-18_19-31-09/edit.js`])
@@ -24,10 +28,12 @@ const config = {
       } else {
         // resolve(null)
         // return
-        import('./demo-data.json').then(data => {
-          pageContent = JSON.parse(JSON.stringify(data))
-          resolve(pageContent)
-        })
+        // import('./demo-data.json').then(data => {
+        //   pageContent = JSON.parse(JSON.stringify(data))
+        //   resolve(pageContent)
+        // })
+
+        resolve(null)
       }
     })
   },
@@ -67,10 +73,15 @@ const config = {
 }
 
 export default function MyDesigner() {
-  const designerRef = useRef<{ dump, toJSON }>()
+  const designerRef = useRef<{ switchActivity,dump, toJSON }>()
+
+  const switchSlider = useCallback(() => {
+    designerRef.current?.switchActivity('@mybricks/plugins/service')
+  }, [])
 
   const save = useCallback(() => {//保存
     const json = designerRef.current?.dump()
+
     window.localStorage.setItem('--mybricks--', JSON.stringify(json))
     message.info(`保存完成`)
   }, [])
@@ -80,7 +91,7 @@ export default function MyDesigner() {
 
     window.localStorage.setItem('--preview--', JSON.stringify(json))
 
-    window.location.href = '/preview.html'
+    window.open('/preview.html')
   }, [])
 
   const publish = useCallback(() => {
@@ -108,6 +119,9 @@ export default function MyDesigner() {
       <div className={css.show}>
         <div className={css.toolbar}>
           <div className={css.tt}>&lt;定制您自己的无代码设计解决方案&gt;</div>
+          <div className={css.btns}>
+            {/*<button onClick={switchSlider}>激活连接器插件</button>*/}
+          </div>
           <button className={css.primary} onClick={save}>保存</button>
           <button onClick={preview}>预览</button>
           <button onClick={publish}>发布到本地</button>

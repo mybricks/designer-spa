@@ -32,6 +32,9 @@
       ],
       "@mybricks/render-web": [
         "../render-web/src/index.tsx"
+      ],
+      "@mybricks/plugin-connector-http": [
+        "../../_plugin-connector-http/src/index.tsx"
       ]
     }
   },
