@@ -18,8 +18,8 @@
   "author": "CheMingjun",
   "license": "ISC",
   "dependencies": {
-    "@mybricks/designer-spa": "^1.0.34",
-    "@mybricks/plugin-connector-http": "^0.0.8",
+    "@mybricks/designer-spa": "^1.0.35",
+    "@mybricks/plugin-connector-http": "0.0.24",
     "@mybricks/render-web": "^1.0.11",
     "antd": "^4.23.6"
   },

@@ -1,20 +1,16 @@
-import React, {useCallback, useRef} from "react";
-import {message} from "antd";
+import React, { useCallback, useRef } from "react";
+import { message } from "antd";
 import css from "./MyDesigner.less";
 
-import Designer from '@mybricks/designer-spa'
-
+import Designer from '@mybricks/designer-spa';
+import servicePlugin, { call as callConnectorHttp } from "@mybricks/plugin-connector-http"; //连接器插件和运行时
 import htmlTpt from './pub-tpt.html'
-
-import servicePlugin from '@mybricks/plugin-connector-http'
-
-import {callConnectorHttp} from '@mybricks/plugin-connector-http/lib/ajax'
 
 const config = {
   plugins: [servicePlugin()],
   comLibLoader(desc) {//加载组件库
     return new Promise((resolve, reject) => {
-      resolve([`https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/5665_1.0.13/2022-11-01_20-53-18/edit.js`])
+      resolve([`https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/5665_1.0.17/2022-11-02_17-27-26/edit.js`])
       //resolve([testLib])
     })
   },
@@ -45,9 +41,14 @@ const config = {
       },
       callConnector(connector, params) {//调用连接器
         if (connector.type === 'http') {//服务接口类型
-          return callConnectorHttp(connector, params)
-
-          //return callConnectorHttp({script: connector.script, params})
+          return callConnectorHttp(connector, params, {
+            // 发送请求前的钩子函数
+            before(options) {
+              return {
+                ...options
+              }
+            }
+          })
         } else {
           return Promise.reject('错误的连接器类型.')
         }
@@ -57,7 +58,7 @@ const config = {
       {
         type: 'jump',
         title: '跳转到',
-        exe({options}) {
+        exe({ options }) {
           const page = options.page
           if (page) {
             window.location.href = page
@@ -136,7 +137,7 @@ export default function MyDesigner() {
           <button onClick={publish}>发布到本地</button>
         </div>
         <div className={css.designer}>
-          <Designer config={config} ref={designerRef}/>
+          <Designer config={config} ref={designerRef} />
         </div>
       </div>
     </>
@@ -145,60 +146,60 @@ export default function MyDesigner() {
 
 //---------------------------------------------------------------------------------
 
-function callConnectorHttp({script, params}) {
-  return new Promise((resolve, reject) => {
-    try {
-      const fn = eval(`(${script})`)
-      fn(params, {then: resolve, onError: reject}, {
-        ajax(opts) {
-          let url = opts.url
-          let headers
-          let body
+// function callConnectorHttp({script, params}) {
+//   return new Promise((resolve, reject) => {
+//     try {
+//       const fn = eval(`(${script})`)
+//       fn(params, {then: resolve, onError: reject}, {
+//         ajax(opts) {
+//           let url = opts.url
+//           let headers
+//           let body
 
-          if (opts.method.toUpperCase() === 'GET') {
-            if (params) {
-              let arr = []
-              for (let objKey in params) {
-                arr.push(objKey + "=" + params[objKey]);
-              }
-              url += `?${arr.join("&")}`
-            }
-          } else if (opts.method.toUpperCase() === 'POST') {
-            if (params) {
-              body = JSON.stringify(params)
-              //headers = {'Content-Type': 'x-www-form-urlencoded;charset=UTF-8'}
-              headers = {'Content-Type': 'application/json'}
-            }
-          }
+//           if (opts.method.toUpperCase() === 'GET') {
+//             if (params) {
+//               let arr = []
+//               for (let objKey in params) {
+//                 arr.push(objKey + "=" + params[objKey]);
+//               }
+//               url += `?${arr.join("&")}`
+//             }
+//           } else if (opts.method.toUpperCase() === 'POST') {
+//             if (params) {
+//               body = JSON.stringify(params)
+//               //headers = {'Content-Type': 'x-www-form-urlencoded;charset=UTF-8'}
+//               headers = {'Content-Type': 'application/json'}
+//             }
+//           }
 
-          return new Promise((resolve1, reject1) => {
-            window.fetch(url, {method: opts.method, body, headers})
-              .then(response => {
-                if (String(response.status).match(/^2\d{2}$/g)) {
-                  if (response && typeof response.json === 'function') {
-                    try {
-                      return response.json()
-                    } catch (ex) {
-                      reject1(ex.message)
-                    }
-                  } else {
-                    resolve1('')
-                  }
-                } else {
-                  reject1(`服务连接错误（状态码 ${response.status}）`)
-                }
-              })
-              .then(data => {
-                resolve1(data)
-              })
-              .catch(err => {
-                reject1(err.message)
-              })
-          })
-        }
-      })
-    } catch (ex) {
-      reject(`连接器script错误.`)
-    }
-  })
-}
+//           return new Promise((resolve1, reject1) => {
+//             window.fetch(url, {method: opts.method, body, headers})
+//               .then(response => {
+//                 if (String(response.status).match(/^2\d{2}$/g)) {
+//                   if (response && typeof response.json === 'function') {
+//                     try {
+//                       return response.json()
+//                     } catch (ex) {
+//                       reject1(ex.message)
+//                     }
+//                   } else {
+//                     resolve1('')
+//                   }
+//                 } else {
+//                   reject1(`服务连接错误（状态码 ${response.status}）`)
+//                 }
+//               })
+//               .then(data => {
+//                 resolve1(data)
+//               })
+//               .catch(err => {
+//                 reject1(err.message)
+//               })
+//           })
+//         }
+//       })
+//     } catch (ex) {
+//       reject(`连接器script错误.`)
+//     }
+//   })
+// }
