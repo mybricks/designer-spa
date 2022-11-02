@@ -33,8 +33,14 @@
       "@mybricks/render-web": [
         "../render-web/src/index.tsx"
       ],
+      "@mybricks/comlib-core": [
+        "../../_comlibs/comlib-core/src/runtime.ts"
+      ],
       "@mybricks/plugin-connector-http": [
         "../../_plugin-connector-http/src/index.tsx"
+      ],
+      "@mybricks/plugin-connector-http/lib/ajax": [
+        "../../_plugin-connector-http/lib/ajax"
       ]
     }
   },

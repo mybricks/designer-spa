@@ -6,14 +6,15 @@ import Designer from '@mybricks/designer-spa'
 
 import htmlTpt from './pub-tpt.html'
 
-//import servicePlugin from '@mybricks/plugin-connector-http'
+import servicePlugin from '@mybricks/plugin-connector-http'
 
+import {callConnectorHttp} from '@mybricks/plugin-connector-http/lib/ajax'
 
 const config = {
-  //plugins: [servicePlugin()],
-  comlibLoader(desc) {//加载组件库
+  plugins: [servicePlugin()],
+  comLibLoader(desc) {//加载组件库
     return new Promise((resolve, reject) => {
-      resolve([`https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/5665_1.0.7/2022-10-18_19-31-09/edit.js`])
+      resolve([`https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/5665_1.0.13/2022-11-01_20-53-18/edit.js`])
       //resolve([testLib])
     })
   },
@@ -44,7 +45,9 @@ const config = {
       },
       callConnector(connector, params) {//调用连接器
         if (connector.type === 'http') {//服务接口类型
-          return callConnectorHttp({script: connector.script, params})
+          return callConnectorHttp(connector, params)
+
+          //return callConnectorHttp({script: connector.script, params})
         } else {
           return Promise.reject('错误的连接器类型.')
         }
@@ -73,7 +76,7 @@ const config = {
 }
 
 export default function MyDesigner() {
-  const designerRef = useRef<{ switchActivity,dump, toJSON }>()
+  const designerRef = useRef<{ switchActivity, dump, toJSON }>()
 
   const switchSlider = useCallback(() => {
     designerRef.current?.switchActivity('@mybricks/plugins/service')
@@ -91,7 +94,13 @@ export default function MyDesigner() {
 
     window.localStorage.setItem('--preview--', JSON.stringify(json))
 
-    window.open('/preview.html')
+    const win = window.open('', 'preview');
+    if (win.location.href === "about:blank") {
+      window.open('/preview.html', 'preview')
+    } else {
+      win.focus()
+    }
+
   }, [])
 
   const publish = useCallback(() => {
