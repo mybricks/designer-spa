@@ -1,9 +1,9 @@
-import React, { useCallback, useRef } from "react";
-import { message } from "antd";
+import React, {useCallback, useRef} from "react";
+import {message} from "antd";
 import css from "./MyDesigner.less";
 
 import Designer from '@mybricks/designer-spa';
-import servicePlugin, { call as callConnectorHttp } from "@mybricks/plugin-connector-http"; //连接器插件和运行时
+import servicePlugin, {call as callConnectorHttp} from "@mybricks/plugin-connector-http"; //连接器插件和运行时
 import htmlTpt from './pub-tpt.html'
 
 const config = {
@@ -34,6 +34,9 @@ const config = {
       }
     })
   },
+  geoView: {
+    //nav: {float: false},
+  },
   com: {//组件运行配置
     env: {
       i18n(title) {//多语言
@@ -58,7 +61,7 @@ const config = {
       {
         type: 'jump',
         title: '跳转到',
-        exe({ options }) {
+        exe({options}) {
           const page = options.page
           if (page) {
             window.location.href = page
@@ -137,7 +140,7 @@ export default function MyDesigner() {
           <button onClick={publish}>发布到本地</button>
         </div>
         <div className={css.designer}>
-          <Designer config={config} ref={designerRef} />
+          <Designer config={config} ref={designerRef}/>
         </div>
       </div>
     </>
