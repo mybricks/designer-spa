@@ -9,8 +9,7 @@ const outputPath = path.resolve(__dirname, `../_assets`)
 module.exports = {
   mode: 'development',
   entry: {
-    index: path.resolve(__dirname, `../src/index.tsx`),
-    preview: path.resolve(__dirname, `../src/preview.tsx`)
+    index: path.resolve(__dirname, `../src/index.tsx`)
   },
   output: {
     path: outputPath,
@@ -43,8 +42,7 @@ module.exports = {
       amd: 'antd',
       root: "antd"
     },
-    '@ant-design/icons': 'icons',
-    '@ant-design/charts': 'charts',
+    '@ant-design/icons': 'icons'
   }],
   devtool: 'cheap-source-map',//devtool: 'cheap-source-map',
   // resolve: {
