@@ -1,0 +1,64 @@
+
+.show {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  border: 1px solid #EEE;
+  //margin: auto;
+  /* transition: all 0.5s ease 0s; */
+  /* transform: scale(0.98); */
+  //box-shadow: rgb(0 0 0 / 13%) 2px 2px 40px;
+  //align-items: center;
+
+  //padding-top: 120px;
+
+  .toolbar {
+    height: 40px;
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #CCC;
+    background: #F7F7F7;
+    font-size: 12px;
+
+    .tt {
+      font-weight: bold;
+      margin-right: auto;
+      font-size: 14px;
+      margin-left: 10px;
+      font-style: italic;
+      color: #999;
+    }
+
+    .btns {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    button {
+      border: 1px solid #DDD;
+      border-radius: 3px;
+      padding: 3px 12px;
+      margin: 0 2px;
+      cursor: pointer;
+      background-color: #FFF;
+    }
+
+    .primary {
+      background-color: #FA6400;
+      color: #FFF;
+      font-weight: bold;
+      border: 0;
+    }
+  }
+
+
+  .designer {
+    flex: 1;
+    overflow: hidden;
+  }
+}

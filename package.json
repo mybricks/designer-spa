@@ -1,7 +1,7 @@
 {
-  "name": "@mybricks/designer-workflow-demo",
+  "name": "@mybricks/designer-spa-demo",
   "version": "1.0.0",
-  "description": "Workflow demo use @mybricks/nocode-engine",
+  "description": "SPA(Single page app) designer engine",
   "main": "index.min.js",
   "scripts": {
     "dev": "webpack-dev-server --config ./scripts/webpack.dev.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mybricks/rxui.git"
+    "url": "https://github.com:mybricks/designer-spa-demo.git"
   },
   "publishConfig": {
     "access": "public",
@@ -18,8 +18,9 @@
   "author": "CheMingjun",
   "license": "ISC",
   "dependencies": {
-    "@mybricks/designer-topl": "^1.0.0",
+    "@mybricks/designer-spa": "^1.0.37",
     "@mybricks/plugin-connector-http": "0.0.30",
+    "@mybricks/render-web": "^1.0.11",
     "antd": "^4.23.6"
   },
   "devDependencies": {
