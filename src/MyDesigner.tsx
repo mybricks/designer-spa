@@ -14,6 +14,11 @@ const config = {
       //resolve([testLib])
     })
   },
+  // editView: {
+  //   editorLoader(editConfig) {
+  //     return PcEditor({editConfig, projectData: {}} as any)
+  //   }
+  // },
   pageContentLoader() {//加载页面内容
     const pageContent = window.localStorage.getItem('--mybricks--')
     return new Promise((resolve, reject) => {
@@ -34,9 +39,9 @@ const config = {
       }
     })
   },
-  geoView: {
-    //nav: {float: false},
-  },
+  // geoView: {
+  //   nav: {float: false},
+  // },
   com: {//组件运行配置
     env: {
       i18n(title) {//多语言

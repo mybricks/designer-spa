@@ -10,9 +10,6 @@ if (!json) {
 
 try {
   json = JSON.parse(json)
-  if (!json.script || !json.slot) {
-    throw new Error('数据错误')
-  }
 } catch (ex) {
   throw ex
 }
