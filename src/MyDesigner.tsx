@@ -10,7 +10,7 @@ const config = {
   plugins: [servicePlugin()],
   comLibLoader(desc) {//加载组件库
     return new Promise((resolve, reject) => {
-      resolve([`https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/5665_1.0.17/2022-11-02_17-27-26/edit.js`])
+      resolve([`https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/586_1.7.32/2022-11-11_16-16-33/edit.js`])
       //resolve([testLib])
     })
   },
