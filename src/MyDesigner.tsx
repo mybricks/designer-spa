@@ -1,6 +1,6 @@
 import React, {useCallback, useRef} from "react";
 import {message} from "antd";
-import css from "./MyDesigner.less";
+import  "./css.css";
 
 import Designer from '@mybricks/designer-spa';
 import servicePlugin, {call as callConnectorHttp} from "@mybricks/plugin-connector-http"; //连接器插件和运行时
@@ -134,17 +134,17 @@ export default function MyDesigner() {
 
   return (
     <>
-      <div className={css.show}>
-        <div className={css.toolbar}>
-          <div className={css.tt}>&lt;定制您自己的无代码设计解决方案&gt;</div>
-          <div className={css.btns}>
+      <div className={'show'}>
+        <div className={'toolbar'}>
+          <div className={'tt'}>&lt;定制您自己的无代码设计解决方案&gt;</div>
+          <div className={'btns'}>
             {/*<button onClick={switchSlider}>激活连接器插件</button>*/}
           </div>
-          <button className={css.primary} onClick={save}>保存</button>
+          <button className={'primary'} onClick={save}>保存</button>
           <button onClick={preview}>预览</button>
           <button onClick={publish}>发布到本地</button>
         </div>
-        <div className={css.designer}>
+        <div className={'designer'}>
           <Designer config={config} ref={designerRef}/>
         </div>
       </div>
