@@ -33,7 +33,7 @@
   <script src="https://f2.eckwai.com/kos/nlav12333/mybricks/render-web/index.min.js"></script>
 
   <!-- comlib-rt 替换成特定的组件库rt地址 -->
-  <script src="https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/586_1.7.32/2022-11-11_16-16-33/rt.js"></script>
+  <script src="https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/5665_1.0.44/2022-11-14_16-36-52/rt.js"></script>
 
 </head>
 
@@ -50,7 +50,13 @@
   ReactDom.render(React.createElement(Page), document.querySelector('#app'))
 
   function Page() {
-    return renderUI({json: projectJson})
+    return renderUI(projectJson,{
+      env:{
+        callConnector(){
+          ////TODO
+        }
+      }
+    })
   }
 </script>
 
