@@ -20,7 +20,7 @@
   "dependencies": {
     "@mybricks/designer-spa": "^1.0.62",
     "@mybricks/plugin-connector-http": "0.0.30",
-    "@mybricks/render-web": "^1.0.20",
+    "@mybricks/render-web": "^1.0.23",
     "antd": "^4.23.6"
   },
   "devDependencies": {
