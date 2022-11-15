@@ -6,11 +6,59 @@ import Designer from '@mybricks/designer-spa';
 import servicePlugin, {call as callConnectorHttp} from "@mybricks/plugin-connector-http"; //连接器插件和运行时
 import htmlTpt from './pub-tpt.html'
 
+// const selfLib = {
+//   comAray: [
+//     {
+//       id: 'test',
+//       title: '测试组件',
+//       version: '1.0.1',
+//       namespace: 'test.a',
+//       runtime() {
+//         return (
+//           <div>TODO</div>
+//         )
+//       }
+//     }
+//   ],
+//   id: 'defined',
+//   title: '我的组件库',
+//   defined: true
+// }
+
 const config = {
   plugins: [servicePlugin()],
   comLibLoader(desc) {//加载组件库
     return new Promise((resolve, reject) => {
-      resolve([`https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/5665_1.0.39/2022-11-14_11-08-43/edit.js`])
+      // if (desc) {
+      //   if (desc.cmd === 'addCom') {
+      //     const selfLib = {
+      //       comAray: [
+      //         {
+      //           id: 'test',
+      //           title: '测试组件',
+      //           version: '1.0.1',
+      //           namespace: 'test.a',
+      //           runtime() {
+      //             return (
+      //               <div>TODO</div>
+      //             )
+      //           }
+      //         }
+      //       ],
+      //       id: desc.libId,
+      //       title: '我的组件库',
+      //       defined: true
+      //     }
+      //
+      //     resolve(selfLib)
+      //
+      //     return
+      //   }
+      // }
+
+      //加载组件库
+      resolve([`https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/5665_1.0.44/2022-11-14_16-36-52/edit.js`])
+      //resolve([selfLib,`https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/5665_1.0.44/2022-11-14_16-36-52/edit.js`])
       //resolve([testLib])
     })
   },
@@ -85,7 +133,7 @@ const config = {
 }
 
 export default function MyDesigner() {
-  const designerRef = useRef<{ switchActivity, dump, toJSON }>()
+  const designerRef = useRef<{ switchActivity, dump, toJSON,getPluginData }>()
 
   const switchSlider = useCallback(() => {
     designerRef.current?.switchActivity('@mybricks/plugins/service')

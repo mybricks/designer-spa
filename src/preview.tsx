@@ -1,6 +1,9 @@
 import {render} from 'react-dom'
 import {render as renderUI} from '@mybricks/render-web'//使用Mybricks-web渲染器
 
+//连接器运行时
+import {call} from '@mybricks/plugin-connector-http'
+
 //准备编译的数据，结构为 {slot,script}，根据 toJSON 导出
 let json = localStorage.getItem('--preview--')
 
@@ -27,8 +30,9 @@ function Page() {
           env: {//配置组件运行的各类环境信息
             i18n(text) {//多语言
               return text
-            }
-          }
+            },
+            callConnector: call
+          },
         })
       }
     </div>
