@@ -56,6 +56,7 @@ const config = {
       //   }
       // }
 
+      //加载组件库
       resolve([`https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/5665_1.0.44/2022-11-14_16-36-52/edit.js`])
       //resolve([selfLib,`https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/5665_1.0.44/2022-11-14_16-36-52/edit.js`])
       //resolve([testLib])
