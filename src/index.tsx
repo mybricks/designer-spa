@@ -11,4 +11,3 @@ function MyApp() {
     <MyDesigner/>
   )
 }
-

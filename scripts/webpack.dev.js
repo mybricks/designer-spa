@@ -83,6 +83,11 @@ module.exports = {
                 target: 'es6'
               }
             }
+          },
+          {
+            options: {
+            },
+            loader: "@mybricks/cloud-com-loader",
           }
         ]
       },
