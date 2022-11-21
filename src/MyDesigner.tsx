@@ -1,64 +1,16 @@
 import React, {useCallback, useRef} from "react";
 import {message} from "antd";
-import  "./css.css";
+import css from "./MyDesigner.less";
 
 import Designer from '@mybricks/designer-spa';
 import servicePlugin, {call as callConnectorHttp} from "@mybricks/plugin-connector-http"; //连接器插件和运行时
 import htmlTpt from './pub-tpt.html'
 
-// const selfLib = {
-//   comAray: [
-//     {
-//       id: 'test',
-//       title: '测试组件',
-//       version: '1.0.1',
-//       namespace: 'test.a',
-//       runtime() {
-//         return (
-//           <div>TODO</div>
-//         )
-//       }
-//     }
-//   ],
-//   id: 'defined',
-//   title: '我的组件库',
-//   defined: true
-// }
-
 const config = {
   plugins: [servicePlugin()],
   comLibLoader(desc) {//加载组件库
     return new Promise((resolve, reject) => {
-      // if (desc) {
-      //   if (desc.cmd === 'addCom') {
-      //     const selfLib = {
-      //       comAray: [
-      //         {
-      //           id: 'test',
-      //           title: '测试组件',
-      //           version: '1.0.1',
-      //           namespace: 'test.a',
-      //           runtime() {
-      //             return (
-      //               <div>TODO</div>
-      //             )
-      //           }
-      //         }
-      //       ],
-      //       id: desc.libId,
-      //       title: '我的组件库',
-      //       defined: true
-      //     }
-      //
-      //     resolve(selfLib)
-      //
-      //     return
-      //   }
-      // }
-
-      //加载组件库
-      resolve([`https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/5665_1.0.44/2022-11-14_16-36-52/edit.js`])
-      //resolve([selfLib,`https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/5665_1.0.44/2022-11-14_16-36-52/edit.js`])
+      resolve([`https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/5665_1.0.47/2022-11-21_14-32-23/edit.js`])
       //resolve([testLib])
     })
   },
@@ -133,7 +85,7 @@ const config = {
 }
 
 export default function MyDesigner() {
-  const designerRef = useRef<{ switchActivity, dump, toJSON,getPluginData }>()
+  const designerRef = useRef<{ switchActivity, dump, toJSON }>()
 
   const switchSlider = useCallback(() => {
     designerRef.current?.switchActivity('@mybricks/plugins/service')
@@ -182,17 +134,17 @@ export default function MyDesigner() {
 
   return (
     <>
-      <div className={'show'}>
-        <div className={'toolbar'}>
-          <div className={'tt'}>&lt;定制您自己的无代码设计解决方案&gt;</div>
-          <div className={'btns'}>
+      <div className={css.show}>
+        <div className={css.toolbar}>
+          <div className={css.tt}>&lt;定制您自己的无代码设计解决方案&gt;</div>
+          <div className={css.btns}>
             {/*<button onClick={switchSlider}>激活连接器插件</button>*/}
           </div>
-          <button className={'primary'} onClick={save}>保存</button>
+          <button className={css.primary} onClick={save}>保存</button>
           <button onClick={preview}>预览</button>
           <button onClick={publish}>发布到本地</button>
         </div>
-        <div className={'designer'}>
+        <div className={css.designer}>
           <Designer config={config} ref={designerRef}/>
         </div>
       </div>
