@@ -17,6 +17,7 @@ registerMicroApps([
   {
     name: 'reactApp', // 子应用名称
     // 子应用地址，.html / .js  介可
+    // 注：资源地址需要支持 CORS 跨域访问
     entry: 'https://ali-ec.static.yximgs.com/kos/nlav12333/fangzhou/pub/fangzhou-fangzhou-pEvCqc/index.20221118.154217.txt',
     container: '#container', // 渲染的容器ID
     activeRule: '/app-react', // 激活路由
