@@ -7,6 +7,11 @@ import { registerMicroApps, start } from 'qiankun'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
+/** 
+ * 这里以 qiankun 微前端框架接入为例子
+ * 更多 API参考 https://qiankun.umijs.org/zh/api
+ * **/
+
 // 注册子应用路由
 registerMicroApps([
   {
