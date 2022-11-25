@@ -2,7 +2,7 @@ import React, {useCallback, useRef} from "react";
 import {message} from "antd";
 import css from "./MyDesigner.less";
 
-import Designer from '@mybricks/designer-spa';
+import Designer from '@mybricks/designer';
 import servicePlugin, {call as callConnectorHttp} from "@mybricks/plugin-connector-http"; //连接器插件和运行时
 import htmlTpt from './pub-tpt.html'
 
@@ -10,7 +10,7 @@ const config = {
   plugins: [servicePlugin()],
   comLibLoader(desc) {//加载组件库
     return new Promise((resolve, reject) => {
-      resolve([`https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/5665_1.0.47/2022-11-21_14-32-23/edit.js`])
+      resolve([`https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/5665_1.0.49/2022-11-23_16-54-39/edit.js `])
       //resolve([testLib])
     })
   },
