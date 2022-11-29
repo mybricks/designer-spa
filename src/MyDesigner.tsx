@@ -11,7 +11,7 @@ function getConfig ({ projectJson }) {
     plugins: [servicePlugin()],
     comLibLoader(desc) {//加载组件库
       return new Promise((resolve, reject) => {
-        resolve([`https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/5665_1.0.46/2022-11-17_21-50-57/edit.js`])
+        resolve([`https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/5665_1.0.55/2022-11-29_20-46-43/edit.js`])
       })
     },
     editView: {
