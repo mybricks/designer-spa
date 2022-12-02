@@ -1,0 +1,57 @@
+
+.show {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #EEE;
+  }
+
+  .toolbar {
+    height: 40px;
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #CCC;
+    background: #F7F7F7;
+    font-size: 12px;
+  }
+
+
+  .toolbar .tt {
+    font-weight: bold;
+    margin-right: auto;
+    font-size: 14px;
+    margin-left: 10px;
+    font-style: italic;
+    color: #999;
+  }
+
+  .toolbar .btns {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .toolbar  button {
+    border: 1px solid #DDD;
+    border-radius: 3px;
+    padding: 3px 12px;
+    margin: 0 2px;
+    cursor: pointer;
+    background-color: #FFF;
+  }
+
+  .toolbar .primary {
+    background-color: #FA6400;
+    color: #FFF;
+    font-weight: bold;
+    border: 0;
+  }
+
+  .designer {
+    flex: 1;
+    overflow: hidden;
+  }
