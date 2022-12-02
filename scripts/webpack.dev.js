@@ -10,7 +10,8 @@ module.exports = {
   mode: 'development',
   entry: {
     index: path.resolve(__dirname, `../src/index.tsx`),
-    preview: path.resolve(__dirname, `../src/preview.tsx`)
+    preview: path.resolve(__dirname, `../src/preview.tsx`),
+    mock: path.resolve(__dirname, `../src/mock.tsx`)
   },
   output: {
     path: outputPath,
