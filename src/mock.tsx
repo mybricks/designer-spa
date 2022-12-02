@@ -1,10 +1,8 @@
-import React, {useCallback, useRef} from "react";
-import {message} from "antd";
+import React, {useRef} from "react";
 import css from "./MyDesigner.less";
 import {render} from 'react-dom'
-import Designer from '@mybricks/designer-spa';
-import servicePlugin, {callMock} from "@mybricks/plugin-connector-http"; //连接器插件和运行时
-import htmlTpt from './pub-tpt.html'
+import Designer from '@mybricks/designer';
+import servicePlugin, {mock} from "@mybricks/plugin-connector-http"; //连接器插件和运行时
 
 
 const config = {
@@ -40,7 +38,7 @@ const config = {
         return title
       },
       callConnector(connector) {//调用连接器
-        return callMock(connector)
+        return mock(connector)
       },
     },
     events: [//配置事件
