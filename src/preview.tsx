@@ -37,8 +37,10 @@ function Page({ mainProps }) {
             getMainProps: () => { // 获取主应用参数方法，如：token等参数，取决于主应用传入
               return mainProps
             },
-            getQuery () { // 获取真实路由参数
-              return {}
+            vars: { // 环境变量
+              getQuery () { // 获取真实路由参数
+                return {}
+              },
             },
           },
         })

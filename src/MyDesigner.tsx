@@ -4,14 +4,16 @@ import css from "./MyDesigner.less";
 
 import Designer from '@mybricks/designer';
 import servicePlugin, {call as callConnectorHttp} from "@mybricks/plugin-connector-http"; //连接器插件和运行时
+import toolsPlugin from '@mybricks/plugin-tools'
 import htmlTpt from './pub-tpt.html'
 
 function getConfig ({ projectJson }) {
   return {
-    plugins: [servicePlugin()],
+    plugins: [servicePlugin(), toolsPlugin()],
     comLibLoader(desc) {//加载组件库
       return new Promise((resolve, reject) => {
-        resolve([`https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/5665_1.0.55/2022-11-29_20-46-43/edit.js`])
+        resolve([`https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/5665_1.0.57/2022-12-02_16-23-32/edit.js`])
+        // resolve(['http://localhost:8001/libEdt.js'])
       })
     },
     editView: {
@@ -76,8 +78,10 @@ function getConfig ({ projectJson }) {
             return Promise.reject('错误的连接器类型.')
           }
         },
-        getQuery () { // 调试路由参数
-          return projectJson.debugQuery
+        vars: { // 环境变量
+          getQuery () { // 调试路由参数
+            return projectJson.debugQuery
+          },
         },
       },
       events: [//配置事件
