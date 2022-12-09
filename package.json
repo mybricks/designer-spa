@@ -18,10 +18,10 @@
   "author": "CheMingjun",
   "license": "ISC",
   "dependencies": {
-    "@mybricks/designer": "^1.0.17",
+    "@mybricks/designer": "^1.0.45",
     "@mybricks/plugin-connector-http": "1.0.8",
-    "@mybricks/plugin-tools": "^1.0.1",
-    "@mybricks/render-web": "^1.0.49",
+    "@mybricks/plugin-tools": "^1.0.3",
+    "@mybricks/render-web": "^1.0.70",
     "antd": "^4.23.6"
   },
   "devDependencies": {
