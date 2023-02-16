@@ -27,11 +27,14 @@
     "jsx": "react",
     "baseUrl": ".",
     "paths": {
-      "@mybricks/designer": [
-        "../designer/src/index.tsx"
+      "@mybricks/designer-spa": [
+        "../designer-spa/src/index.tsx"
       ],
       "@mybricks/render-web": [
         "../render-web/src/index.tsx"
+      ],
+      "@mybricks/render-com": [
+        "../render-com/src/index.tsx"
       ],
       "@mybricks/comlib-core": [
         "../../_comlibs/comlib-core/src/runtime.ts"
@@ -41,6 +44,9 @@
       ],
       "@mybricks/plugin-connector-http/lib/ajax": [
         "../../_plugin-connector-http/lib/ajax"
+      ],
+      "@mybricks/file-parser": [
+        "../file-parser/src/index.ts"
       ]
     }
   },

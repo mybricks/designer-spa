@@ -18,10 +18,10 @@
   "author": "CheMingjun",
   "license": "ISC",
   "dependencies": {
-    "@mybricks/designer": "^1.0.49",
-    "@mybricks/plugin-connector-http": "1.1.1",
-    "@mybricks/plugin-tools": "1.0.5",
-    "@mybricks/render-web": "1.0.76",
+    "@mybricks/designer-spa": "^1.1.32",
+    "@mybricks/plugin-connector-http": "^1.1.3",
+    "@mybricks/plugin-tools": "^1.0.5",
+    "@mybricks/render-web": "^1.1.15",
     "antd": "^4.23.6"
   },
   "devDependencies": {
@@ -43,6 +43,7 @@
     "image-webpack-loader": "^8.1.0",
     "less": "^4.1.3",
     "less-loader": "^11.0.0",
+    "mybricks-plugin-connect-comlib-app": "^0.0.15",
     "raw-loader": "^4.0.1",
     "request": "^2.88.2",
     "rimraf": "^3.0.2",

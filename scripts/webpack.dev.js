@@ -4,14 +4,13 @@ const ignoreWarningPlugin = require('./ignoreWarningPlugin')
 
 const WebpackBar = require('webpackbar');
 
-const outputPath = path.resolve(__dirname, `../_assets`)
+const outputPath = path.resolve(__dirname, `../target`)
 
 module.exports = {
   mode: 'development',
   entry: {
     index: path.resolve(__dirname, `../src/index.tsx`),
-    preview: path.resolve(__dirname, `../src/preview.tsx`),
-    mock: path.resolve(__dirname, `../src/mock.tsx`)
+    preview: path.resolve(__dirname, `../src/preview.tsx`)
   },
   output: {
     path: outputPath,
@@ -44,8 +43,7 @@ module.exports = {
       amd: 'antd',
       root: "antd"
     },
-    '@ant-design/icons': 'icons',
-    '@ant-design/charts': 'charts',
+    '@ant-design/icons': 'icons'
   }],
   devtool: 'cheap-source-map',//devtool: 'cheap-source-map',
   // resolve: {
@@ -84,11 +82,6 @@ module.exports = {
                 target: 'es6'
               }
             }
-          },
-          {
-            options: {
-            },
-            loader: "@mybricks/cloud-com-loader",
           }
         ]
       },
