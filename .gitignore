@@ -5,6 +5,7 @@ node_modules
 _scripts/
 _src/
 _assets/
+_target/
 src/**/*.js
 tags/*
 .history
