@@ -64,7 +64,7 @@ const config = {
     layout: 'absolute'//按照绝对定位显示布局
   },
   toplView: {
-    display: false
+    //display: false
   }
 }
 

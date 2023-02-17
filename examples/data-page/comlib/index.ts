@@ -11,6 +11,9 @@ import pieDef from './pie/com.json'
 import pieRt from './pie/runtime'
 import pieData from './pie/data.json'
 
+import tabsDef from './tabs/com.json'
+import tabsRt from './tabs/runtime'
+
 
 const lib = {
   id: 'mybricks-basic-comlib',
@@ -22,6 +25,10 @@ const lib = {
       comDef: pieDef,
       data: pieData,
       rt: pieRt
+    }),
+    merge({
+      comDef: tabsDef,
+      rt: tabsRt
     }),
   ]
 }

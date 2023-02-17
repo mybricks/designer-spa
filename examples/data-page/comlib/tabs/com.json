@@ -1,0 +1,15 @@
+{
+  "title": "容器组件样例",
+  "namespace": "my.tabs",
+  "author": "MyBricks",
+  "author_name": "MyBricks",
+  "version": "1.0.0",
+  "description": "饼图",
+  "runtime": "./runtime.tsx",
+  "slots": [
+    {
+      "id": "container",
+      "title": "测试容器"
+    }
+  ]
+}
