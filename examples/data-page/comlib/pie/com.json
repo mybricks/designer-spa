@@ -1,0 +1,10 @@
+{
+  "title": "饼图",
+  "namespace": "my.pie",
+  "author": "MyBricks",
+  "author_name": "MyBricks",
+  "version": "1.0.0",
+  "description": "饼图",
+  "data": "./data.json",
+  "runtime": "./runtime.tsx"
+}

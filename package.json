@@ -4,7 +4,8 @@
   "description": "SPA(Single page app) designer engine",
   "main": "index.min.js",
   "scripts": {
-    "dev": "webpack-dev-server --config ./scripts/webpack.dev.js",
+    "dev-pc-page": "webpack-dev-server --config ./scripts/pc-page.dev.js",
+    "dev-data-page": "webpack-dev-server --config ./scripts/data-page.dev.js",
     "dev-": "webpack-dev-server --config ./_scripts/webpack.dev.js"
   },
   "repository": {
@@ -18,7 +19,7 @@
   "author": "CheMingjun",
   "license": "ISC",
   "dependencies": {
-    "@mybricks/designer-spa": "^1.1.32",
+    "@mybricks/designer-spa": "^1.1.33",
     "@mybricks/plugin-connector-http": "^1.1.3",
     "@mybricks/plugin-tools": "^1.0.5",
     "@mybricks/render-web": "^1.1.15",

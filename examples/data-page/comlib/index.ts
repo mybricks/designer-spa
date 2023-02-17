@@ -1,0 +1,44 @@
+/**
+ * MyBricks Opensource
+ * https://mybricks.world
+ * This source code is licensed under the MIT license.
+ *
+ * CheMingjun @2019
+ * mybricks@126.com
+ */
+
+import pieDef from './pie/com.json'
+import pieRt from './pie/runtime'
+import pieData from './pie/data.json'
+
+
+const lib = {
+  id: 'mybricks-basic-comlib',
+  title: '基础组件库',
+  author: 'CheMingjun',
+  version: '1.0.1',
+  comAray: [
+    merge({
+      comDef: pieDef,
+      data: pieData,
+      rt: pieRt
+    }),
+  ]
+}
+
+export default lib
+
+//-----------------------------------------------------------------
+
+function merge({
+                 comDef,
+                 icon,
+                 rt,
+                 data
+               }: { comDef, icon?, rt?, data? }) {
+  return Object.assign(comDef, {
+    runtime: rt,
+    icon: icon,
+    data
+  })
+}

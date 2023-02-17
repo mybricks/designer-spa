@@ -1,17 +1,13 @@
 const path = require('path')
 
-const ignoreWarningPlugin = require('./ignoreWarningPlugin')
+const ignoreWarningPlugin = require('./_ignoreWarningPlugin')
 
 const WebpackBar = require('webpackbar');
 
-const outputPath = path.resolve(__dirname, `../target`)
+const outputPath = path.resolve(__dirname, `../targets`)
 
 module.exports = {
   mode: 'development',
-  entry: {
-    index: path.resolve(__dirname, `../src/index.tsx`),
-    preview: path.resolve(__dirname, `../src/preview.tsx`)
-  },
   output: {
     path: outputPath,
     filename: './[name].js',
