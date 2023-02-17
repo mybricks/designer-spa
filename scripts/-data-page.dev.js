@@ -4,7 +4,7 @@ const ignoreWarningPlugin = require('./_ignoreWarningPlugin')
 const webpack = require('webpack')
 const WebpackBar = require('webpackbar');
 
-const outputPath = path.resolve(__dirname, `../examples/data-page/_targets`)
+const outputPath = path.resolve(__dirname, `../targets`)
 const myBricksAlias = require('../../designer-spa/_scripts/mybricks-designer-alias')
 
 const MybricksPluginConnectComlibApp = require('mybricks-plugin-connect-comlib-app')

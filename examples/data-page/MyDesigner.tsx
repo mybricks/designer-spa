@@ -78,6 +78,11 @@ export default function MyDesigner() {
     message.info(`保存完成`)
   }, [])
 
+  const toJSON = useCallback(() => {
+    const json = designerRef.current?.toJSON()
+    console.log(json)
+  }, [])
+
   return (
     <>
       <div className={css.show}>
@@ -87,6 +92,7 @@ export default function MyDesigner() {
             {/*<button onClick={switchSlider}>激活连接器插件</button>*/}
           </div>
           <button className={css.primary} onClick={save}>保存</button>
+          <button onClick={toJSON}>toJSON</button>
         </div>
         <div className={css.designer}>
           <Designer config={config} ref={designerRef}/>

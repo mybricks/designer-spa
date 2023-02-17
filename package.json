@@ -5,6 +5,7 @@
   "main": "index.min.js",
   "scripts": {
     "dev-pc-page": "webpack-dev-server --config ./scripts/pc-page.dev.js",
+    "dev-data-page-": "webpack-dev-server --config ./scripts/-data-page.dev.js",
     "dev-data-page": "webpack-dev-server --config ./scripts/data-page.dev.js",
     "dev-": "webpack-dev-server --config ./_scripts/webpack.dev.js"
   },
