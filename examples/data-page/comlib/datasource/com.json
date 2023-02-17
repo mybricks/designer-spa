@@ -1,13 +1,14 @@
 {
-  "title": "饼图",
-  "namespace": "my.pie",
+  "title": "数据源",
+  "namespace": "my.ds",
   "author": "MyBricks",
   "author_name": "MyBricks",
   "version": "1.0.0",
-  "description": "饼图",
+  "description": "数据源",
   "data": "./data.json",
-  "runtime": "./runtime.tsx",
-  "inputs": [
+  "runtime": "./runtime.ts",
+  "rtType": "js-autorun",
+  "outputs": [
     {
       "id": "datasource",
       "title": "数据源",

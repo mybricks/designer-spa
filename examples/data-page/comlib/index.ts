@@ -7,6 +7,9 @@
  * mybricks@126.com
  */
 
+import dsDef from './datasource/com.json'
+import dsRt from './datasource/runtime'
+
 import pieDef from './pie/com.json'
 import pieRt from './pie/runtime'
 import pieData from './pie/data.json'
@@ -21,6 +24,10 @@ const lib = {
   author: 'CheMingjun',
   version: '1.0.1',
   comAray: [
+    merge({
+      comDef: dsDef,
+      rt: dsRt
+    }),
     merge({
       comDef: pieDef,
       data: pieData,

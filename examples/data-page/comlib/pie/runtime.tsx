@@ -1,10 +1,15 @@
-import {useEffect} from 'react';
+import {useEffect, useState} from 'react';
 
-export default ({env, data}) => {
+export default ({env, data, inputs}) => {
+  const [ds, setDS] = useState(data.data)
+  inputs['datasource'](ds => {//当数据到达
+    setDS(ds)
+  })
+
   return (
     <div style={{width: 400, height: 300}}>
       图表组件
-      <DemoPie data={data.data}/>
+      <DemoPie data={ds}/>
     </div>
   )
 }
