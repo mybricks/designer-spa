@@ -17,36 +17,42 @@ const config = {
     })
   },
   editView: {
-    render({type, data}) {
-      if (type === 'default') {
-        return (
-          <div>
-            <h1>默认面板</h1>
-          </div>
-        )
-      } else if (type === 'component') {
-        return (
-          <div style={{padding: 10}}>
-            <h1>组件面板(修改成类似QuickBI的面板）</h1>
-            <button style={{
-              border: '1px solid red'
-            }} onClick={e => {
-              data.data = [
-                {
-                  type: '新添加的类型1',
-                  value: 30
-                },
-                {
-                  type: '新添加的类型2',
-                  value: 30
-                }
-              ]
-            }}>改变值
-            </button>
-          </div>
-        )
+    editorAppender(props) {//加载自定义编辑器
+      const {type} = props
+      if (type === 'my.test') {//只实现特定的编辑器
+        return <TestEditor {...props}/>
       }
     }
+    // render({type, data}) {
+    //   if (type === 'default') {
+    //     return (
+    //       <div>
+    //         <h1>默认面板</h1>
+    //       </div>
+    //     )
+    //   } else if (type === 'component') {
+    //     return (
+    //       <div style={{padding: 10}}>
+    //         <h1>组件面板(修改成类似QuickBI的面板）</h1>
+    //         <button style={{
+    //           border: '1px solid red'
+    //         }} onClick={e => {
+    //           data.data = [
+    //             {
+    //               type: '新添加的类型1',
+    //               value: 30
+    //             },
+    //             {
+    //               type: '新添加的类型2',
+    //               value: 30
+    //             }
+    //           ]
+    //         }}>改变值
+    //         </button>
+    //       </div>
+    //     )
+    //   }
+    // }
   },
   pageContentLoader() {//加载页面内容
     return new Promise((resolve, reject) => {
@@ -99,5 +105,30 @@ export default function MyDesigner() {
         </div>
       </div>
     </>
+  )
+}
+
+/**
+ * 自定义编辑器
+ * @param type 编辑器类型
+ * @param options 编辑器配置
+ * @param value 获取/设置值
+ * @constructor
+ */
+function TestEditor({type, options, value}) {
+  const setValue = useCallback(() => {
+    value.set(`新标题-${Math.random()}`)
+  }, [])
+
+  return (
+    <div>
+      <button style={{
+        border: '1px solid #EEE',
+        backgroundColor: '#FFF',
+        padding: '3px 20px',
+        margin: 5
+      }} onClick={setValue}>测试按钮
+      </button>
+    </div>
   )
 }

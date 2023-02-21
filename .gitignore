@@ -6,7 +6,7 @@ _scripts/
 _examples/
 _src/
 _assets/
-_target/
+_targets/
 src/**/*.js
 tags/*
 .history

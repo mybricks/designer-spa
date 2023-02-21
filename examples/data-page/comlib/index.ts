@@ -12,6 +12,7 @@ import dsRt from './datasource/runtime'
 
 import pieDef from './pie/com.json'
 import pieRt from './pie/runtime'
+import pieEditors from './pie/editors'
 import pieData from './pie/data.json'
 
 import tabsDef from './tabs/com.json'
@@ -30,6 +31,7 @@ const lib = {
     }),
     merge({
       comDef: pieDef,
+      editors: pieEditors,
       data: pieData,
       rt: pieRt
     }),
@@ -48,9 +50,11 @@ function merge({
                  comDef,
                  icon,
                  rt,
+                 editors,
                  data
-               }: { comDef, icon?, rt?, data? }) {
+               }: { comDef, icon?, editors?, rt, data? }) {
   return Object.assign(comDef, {
+    editors,
     runtime: rt,
     icon: icon,
     data

@@ -5,10 +5,10 @@ export default ({env, data, inputs}) => {
   inputs['datasource'](ds => {//当数据到达
     setDS(ds)
   })
-
+////Ajax
   return (
     <div style={{width: 400, height: 300}}>
-      图表组件
+      {data.title}
       <DemoPie data={ds}/>
     </div>
   )
