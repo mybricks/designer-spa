@@ -27,9 +27,6 @@
     "jsx": "react",
     "baseUrl": ".",
     "paths": {
-      "@mybricks/designer-spa": [
-        "../designer-spa/src/index.tsx"
-      ],
       "@mybricks/render-web": [
         "../render-web/src/index.tsx"
       ],

@@ -1,10 +1,9 @@
-import {render} from 'react-dom'
+import {createRoot} from 'react-dom/client'
 
 import MyDesigner from "./MyDesigner";
 
-render(
-  <MyApp/>, document.querySelector('#root')
-)
+createRoot(document.querySelector('#root'))
+  .render(<MyApp/>)
 
 function MyApp() {
   return (

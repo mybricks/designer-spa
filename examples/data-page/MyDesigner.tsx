@@ -2,8 +2,10 @@ import React, {useCallback, useRef} from "react";
 import {message} from "antd";
 import css from "./MyDesigner.less";
 
-import Designer from '@mybricks/designer-spa';
+//import Designer, {T_DesignerConfig} from '@mybricks/designer-spa';
 import servicePlugin, {call as callConnectorHttp} from "@mybricks/plugin-connector-http"; //连接器插件和运行时
+
+const Designer = window.mybricks.SPADesigner
 
 import testLib from './comlib'
 
@@ -16,13 +18,20 @@ const config = {
       ])
     })
   },
+  geoView: {
+    //layout: 'absolute'//按照绝对定位显示布局
+  },
+  toplView: {
+    //display: false
+  },
   editView: {
+    //width:500,
     editorAppender(props) {//加载自定义编辑器
       const {type} = props
       if (type === 'my.test') {//只实现特定的编辑器
         return <TestEditor {...props}/>
       }
-    }
+    },
     // render({type, data}) {
     //   if (type === 'default') {
     //     return (
@@ -55,7 +64,7 @@ const config = {
     // }
   },
   pageContentLoader() {//加载页面内容
-    return new Promise((resolve, reject) => {
+    return new Promise<string>((resolve, reject) => {
       let pageContent = window.localStorage.getItem('--mybricks--')
       if (pageContent) {
         pageContent = JSON.parse(pageContent)
@@ -65,12 +74,6 @@ const config = {
         resolve(null)
       }
     })
-  },
-  geoView: {
-    layout: 'absolute'//按照绝对定位显示布局
-  },
-  toplView: {
-    //display: false
   }
 }
 

@@ -7,9 +7,9 @@ import servicePlugin, {call as callConnectorHttp} from "@mybricks/plugin-connect
 import htmlTpt from './pub-tpt.html'
 
 const config = {
-  plugins: [servicePlugin()],
-  comLibLoader(desc) {//加载组件库
-    return new Promise((resolve, reject) => {
+  //plugins: [servicePlugin()],
+  comLibLoader() {//加载组件库
+    return new Promise<string[]>((resolve, reject) => {
       resolve([`https://f2.eckwai.com/udata/pkg/eshop/fangzhou/pub/pkg/comlib/pc_1.0.84/edit.js`])
       //resolve([testLib])
     })
@@ -21,7 +21,7 @@ const config = {
   // },
   pageContentLoader() {//加载页面内容
     const pageContent = window.localStorage.getItem('--mybricks--')
-    return new Promise((resolve, reject) => {
+    return new Promise<string>((resolve, reject) => {
       let pageContent = window.localStorage.getItem('--mybricks--')
       if (pageContent) {
         pageContent = JSON.parse(pageContent)
@@ -37,9 +37,9 @@ const config = {
       }
     })
   },
-  // geoView: {
-  //   nav: {float: false},
-  // },
+  geoView: {
+    nav: {float: false},
+  },
   com: {//组件运行配置
     env: {
       i18n(title) {//多语言
