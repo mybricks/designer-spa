@@ -2,25 +2,27 @@ import React, {useCallback, useRef} from "react";
 import {message} from "antd";
 import css from "./MyDesigner.less";
 
-import Designer from '@mybricks/designer-spa';
+/**
+ * 加载连接器插件
+ */
 import servicePlugin, {call as callConnectorHttp} from "@mybricks/plugin-connector-http"; //连接器插件和运行时
 import htmlTpt from './pub-tpt.html'
 
+const Designer = window.mybricks.SPADesigner
+
+/**
+ * 配置设计器
+ */
 const config = {
-  //plugins: [servicePlugin()],
-  comLibLoader() {//加载组件库
+  plugins: [servicePlugin()],//配置插件
+  comLibLoader() {//配置组件
     return new Promise<string[]>((resolve, reject) => {
       resolve([`https://f2.eckwai.com/udata/pkg/eshop/fangzhou/pub/pkg/comlib/pc_1.0.84/edit.js`])
-      //resolve([testLib])
+      //resolve([testLib])//也可以加载本地组件库
     })
   },
-  // editView: {
-  //   editorLoader(editConfig) {
-  //     return PcEditor({editConfig, projectData: {}} as any)
-  //   }
-  // },
-  pageContentLoader() {//加载页面内容
-    const pageContent = window.localStorage.getItem('--mybricks--')
+  pageContentLoader() {//配置加载页面内容
+    const pageContent = window.localStorage.getItem('--mybricks--')//本例中，直接从本地存储中加载
     return new Promise<string>((resolve, reject) => {
       let pageContent = window.localStorage.getItem('--mybricks--')
       if (pageContent) {
@@ -37,10 +39,11 @@ const config = {
       }
     })
   },
-  geoView: {
+  geoView: {//配置布局视图
     nav: {float: false},
   },
-  com: {//组件运行配置
+  toplView: {},//配置交互视图
+  com: {//配置组件运行时的环境扩展
     env: {
       i18n(title) {//多语言
         return title
@@ -85,18 +88,21 @@ const config = {
 export default function MyDesigner() {
   const designerRef = useRef<{ switchActivity, dump, toJSON }>()
 
-  const switchSlider = useCallback(() => {
-    designerRef.current?.switchActivity('@mybricks/plugins/service')
-  }, [])
-
-  const save = useCallback(() => {//保存
+  /**
+   * 保存
+   */
+  const save = useCallback(() => {
     const json = designerRef.current?.dump()
 
     window.localStorage.setItem('--mybricks--', JSON.stringify(json))
     message.info(`保存完成`)
   }, [])
 
+  /**
+   * 预览
+   */
   const preview = useCallback(() => {
+    //从设计器中获取DSL（JSON）
     const json = designerRef.current?.toJSON()
 
     window.localStorage.setItem('--preview--', JSON.stringify(json))
@@ -110,6 +116,9 @@ export default function MyDesigner() {
 
   }, [])
 
+  /**
+   * 发布（导出）
+   */
   const publish = useCallback(() => {
     const title = '我的页面'//页面标题
     const json = designerRef.current?.toJSON()
@@ -140,7 +149,7 @@ export default function MyDesigner() {
           </div>
           <button className={css.primary} onClick={save}>保存</button>
           <button onClick={preview}>预览</button>
-          <button onClick={publish}>发布到本地</button>
+          <button onClick={publish}>发布</button>
         </div>
         <div className={css.designer}>
           <Designer config={config} ref={designerRef}/>

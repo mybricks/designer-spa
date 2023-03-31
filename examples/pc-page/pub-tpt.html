@@ -13,13 +13,12 @@
   <style>
   </style>
 
-  <!-- react about -->
+  <!-- React相关 -->
   <script src="https://f2.eckwai.com/udata/pkg/eshop/fangzhou/pub/pkg/reat-18.0.0/react.production.min.js"></script>
   <script
       src="https://f2.eckwai.com/udata/pkg/eshop/fangzhou/pub/pkg/react-dom-18.0.0/react-dom.production.min.js"></script>
 
-  <!-- antd about -->
-  <script src="//f2.eckwai.com/udata/pkg/eshop/fangzhou/pub/pkg/moment-2.9.1/moment.min.js"></script>
+  <!-- Antd相关 -->
   <link
       rel="stylesheet"
       type="text/css"
@@ -29,10 +28,10 @@
   <script
       src="https://ali-ec.static.yximgs.com/udata/pkg/eshop/fangzhou/pub/pkg/ant-design/icons-4.7.0/dist/index.umd.min.js"></script>
 
-  <!-- mybricks-render-web -->
-  <script src="https://f2.eckwai.com/kos/nlav12333/mybricks/render-web/index.min.js"></script>
+  <!-- Mybricks渲染器-->
+  <script src="https://f2.beckwai.com/udata/pkg/eshop/fangzhou-asset/index.min.e3a8ab7c709907d1.js"></script>
 
-  <!-- comlib-rt 替换成特定的组件库rt地址 -->
+  <!-- 组件库的运行时地址 -->
   <script src="https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/5665_1.0.57/2022-12-02_16-23-32/rt.js"></script>
 
 </head>
@@ -41,57 +40,29 @@
 <div id="app"></div>
 
 <script>
-  ((global) => {
+  const React = window.React
+  const ReactDom = window.ReactDOM
+  /**
+   * Render-web，Mybricks提供的web渲染器
+   */
+  const {render: renderUI} = window._mybricks_render_web
 
-    const React = window.React
-    const ReactDom = window.ReactDOM
-    const {render: renderUI} = window._mybricks_render_web
+  /**
+   * 设计器导出的项目JSON
+   */
+  const projectJson = '-projectJson-'//replace it
 
-    const projectJson = '-projectJson-'//replace it
+  ReactDom.render(React.createElement(Page), document.querySelector('#app'))
 
-    ReactDom.render(React.createElement(Page), document.querySelector('#app'))
-
-    function Page(props) {
-      return renderUI(projectJson,{
-        env:{
-          callConnector(){
-            ////TODO
-          },
-          getMainProps: () => { // 获取主应用参数方法，如：token等参数，取决于主应用传入
-            if (!props) return undefined;
-
-            return props.mainProps
-          }
+  function Page(props) {
+    return renderUI(projectJson,{
+      env:{//对组件的运行环境扩展
+        callConnector(){
+          ////TODO
         }
-      })
-    }
-
-    function renderMethod (props) {
-      ReactDom.render(React.createElement(Page(props)), document.querySelector('#app'))
-    }
-
-    if (!_window.__POWERED_BY_QIANKUN__) {
-      renderMethod({})
-    } else {
-      global['purehtml'] = {
-        bootstrap: () => {},
-        mount: (props) => {
-          renderMethod(props)
-        },
-        unmount: () => {
-          const { container } = props;
-          if (ReactDOM) {
-            ReactDOM.unmountComponentAtNode(
-              container
-                ? container.querySelector('#app')
-                : document.querySelector('#app'),
-            );
-          }
-        },
-      };
-    }
-
-  })(window);
+      }
+    })
+  }
 </script>
 
 </body>
