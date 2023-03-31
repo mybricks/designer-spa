@@ -1,5 +1,4 @@
 import {render} from 'react-dom'
-import {render as renderUI} from '@mybricks/render-web'//使用Mybricks-web渲染器
 
 
 //连接器运行时
@@ -19,6 +18,7 @@ try {
   throw ex
 }
 
+const {render: renderUI} = window._mybricks_render_web
 
 //----------------------------------------------------------------------------
 
