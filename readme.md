@@ -21,7 +21,7 @@
 
 
 ## 使用
-> (注意，使用需经过Mybricks组织授权)
+> <font color='red'>(注意，使用需经过Mybricks组织授权)</font>
 
 ### 1. clone 工程
  > git clone git@github.com:mybricks/designer-spa-demo.git
