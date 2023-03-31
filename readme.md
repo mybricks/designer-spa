@@ -1,8 +1,8 @@
-# 欢迎使用Mybricks-SPA设计引擎
+# 欢迎使用 mybricks-SPA设计引擎
 
->**Mybricks-SPA** 是Mybricks引擎家族面向单页应用的设计引擎。
+>**mybricks-SPA** 是mybricks引擎家族面向单页应用的企业级设计引擎。
 > 
->Mybricks-SPA历经了数百次迭代，目前已经服务于几十种业务，包括中后台、门户页面、数据可视化、H5页面、小程序页面、图片编辑等各类应用场景。
+>mybricks-SPA历经了数百次迭代，目前已经服务于几十种业务，包括中后台、门户页面、数据可视化、H5页面、小程序页面、图片编辑等各类应用场景。
 > 
 >
 
@@ -21,7 +21,7 @@
 
 
 ## 使用
-> <font color='red'>(注意，使用需经过Mybricks组织授权)</font>
+> <font color='red'>注意，使用需经过Mybricks组织授权</font>
 
 ### 1. clone 工程
  > git clone git@github.com:mybricks/designer-spa-demo.git
