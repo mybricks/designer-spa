@@ -16,7 +16,7 @@
 ```
 
 
-## 引擎配置（config部分）
+## 引擎配置（config）部分
 如下图，mybricks-SPA支持对以下各视图区域进行配置/定制：<br/>
 <img src="./img_5.png" style="width:500px"/><br/>
 >V1:侧边栏视图<br/>
@@ -26,7 +26,7 @@
 >V5:属性视图<br/>
 >V6:AI视图<br/>
 
-## V1:侧边栏视图配置
+#### V1:侧边栏视图配置
 侧边栏主要由插件构成，配置插件的代码样例如下：
 ```typescript jsx
 import servicePlugin, {call as callConnectorHttp} from "@mybricks/plugin-connector-http";
@@ -38,4 +38,4 @@ const config = {
 ```
 > 目前mybricks github上已经开源了几款常用的插件，包括http连接器、debug等插件。
 
-## V2:结构视图配置
+#### V2:结构视图配置
