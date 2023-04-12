@@ -9,7 +9,7 @@
 
 ## 可配置区域
 如下图，mybricks-SPA支持对以下各视图区域进行配置/定制：<br/>
-<img src="./img_5.png" style="width:400px"/><br/>
+<img src="./img_5.png" style="width:500px"/><br/>
 V1:侧边栏视图<br/>
 V2:结构视图<br/>
 V3:交互视图<br/>
