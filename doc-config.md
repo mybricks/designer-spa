@@ -7,6 +7,16 @@
 
 <br/>
 
+## 引擎在React中的使用
+> mybricks-SPA引擎是基于React的，因此在使用mybricks-SPA引擎之前，需要先了解React的基本使用方法。
+
+```typescript jsx
+<Designer config={config} ref={designerRef}/>
+```
+>config 引擎配置项
+>designerRef 引擎实例
+> 
+> 
 ## 可配置区域
 如下图，mybricks-SPA支持对以下各视图区域进行配置/定制：<br/>
 <img src="./img_5.png" style="width:500px"/><br/>
@@ -16,3 +26,5 @@ V3:交互视图<br/>
 V4:状态视图<br/>
 V5:属性视图<br/>
 V6:AI视图<br/>
+
+## 结构视图配置
