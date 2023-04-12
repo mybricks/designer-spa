@@ -19,7 +19,7 @@
 ## 引擎配置（config）部分
 mybricks-SPA引擎的配置包括以下两大部分：
 ### 全局配置
-> 全局配置包括了组件库加载器、内容加载器、组件属性扩展等内容
+> 全局配置包括了组件库加载器、文件内容加载器、组件属性扩展等内容
 
 #### 组件库加载器
 ```typescript jsx
@@ -27,6 +27,7 @@ const config = {
   //...
   comLibLoader() {
     return new Promise<string[]>((resolve, reject) => {
+      //加载Mybricks的PC通用组件库
       resolve([`https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/5665_1.1.12/2023-03-31_12-19-17/edit.js`])
       //resolve([testLib])//也可以加载本地组件库
     })
@@ -34,11 +35,42 @@ const config = {
   //...
 }
 ```
-> 上例中配置了通过CDN的方式加载组件库<br/>
 
 **注意：** 
 - 组件库加载器必须返回一个Promise对象;
 - 组件库可以是URL地址，也可以是一个本地组件库对象;
+
+#### 文件内容加载器
+> Mybricks的各类引擎在（编辑）内容加载、保存等方面，均已文件的形式进行。
+```typescript jsx
+const config = {
+  //...
+  pageContentLoader() {
+    const pageContent = window.localStorage.getItem('--mybricks--')//本例中，直接从本地存储中加载
+    return new Promise<string>((resolve, reject) => {
+      let pageContent = window.localStorage.getItem('--mybricks--')
+      if (pageContent) {
+        pageContent = JSON.parse(pageContent)
+
+        resolve(pageContent)
+      } else {
+        // resolve(null)
+        // return
+        import('./demo-data.json').then(data => {
+          pageContent = JSON.parse(JSON.stringify(data))
+          resolve(pageContent)
+        })
+      }
+    })
+  },
+  //...
+}
+```
+
+**注意：**
+- 文件内容加载器必须返回一个Promise对象;
+- 如果内容为空，返回null即可;
+
 
 ### 视图配置<br/>
 mybricks-SPA支持对以下各视图区域进行配置/定制,如下图：<br/>
