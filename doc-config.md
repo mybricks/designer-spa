@@ -26,4 +26,16 @@
 >V5:属性视图<br/>
 >V6:AI视图<br/>
 
-## 结构视图配置
+## V1:侧边栏视图配置
+侧边栏主要由插件构成，配置插件的代码样例如下：
+```typescript jsx
+import servicePlugin, {call as callConnectorHttp} from "@mybricks/plugin-connector-http";
+const config = {
+  //...
+  plugins: [servicePlugin()],//配置插件
+  //...
+}
+```
+> 目前mybricks github上已经开源了几款常用的插件，包括http连接器、debug等插件。
+
+## V2:结构视图配置
