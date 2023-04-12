@@ -129,7 +129,7 @@ const config = {
 
 ### 视图配置<br/>
 mybricks-SPA支持对以下各视图区域进行配置/定制,如下图：<br/>
-<img src="./img_5.png" style="width:700px"/><br/>
+<img src="./img_5.png" style="width:810px"/><br/>
 >V1:侧边栏视图<br/>
 >V2:结构视图<br/>
 >V3:交互视图<br/>
@@ -137,7 +137,7 @@ mybricks-SPA支持对以下各视图区域进行配置/定制,如下图：<br/>
 >V5:属性视图<br/>
 >V6:AI视图<br/>
 
-#### V1:侧边栏视图配置
+#### plugins（V1:侧边栏视图）[非必须]
 侧边栏主要由插件构成，配置插件的代码样例如下：
 ```typescript jsx
 import servicePlugin, {call as callConnectorHttp} from "@mybricks/plugin-connector-http";
@@ -149,4 +149,88 @@ const config = {
 ```
 > 目前mybricks github上已经开源了几款常用的插件，包括http连接器、debug等插件。
 
-#### V2:结构视图配置
+#### geoView（V2:结构视图）[非必须]
+结构视图定义了引擎在结构构成方面的主体部分：
+```typescript jsx
+const config = {
+  //...
+  geoView: {
+    nav: {float: false},//导航栏（组件库及大纲视图）是否浮动
+    type:'mobile',//画布类型 mobile|pc|defined
+    layout: 'absolute',//画布默认布局方式 absolute|normal 绝对定位|排版布局
+    width: {//初始画布宽度 对象或者数字
+      init: 500,
+      editable: true//是否可编辑
+    },
+    height: 400, //同width
+    scenes: [//是否开启多场景
+      {
+        id: 'login',//场景id
+        title: '登录',//标题
+        template: {//模版（非必须）
+          coms: [
+            {
+              namespace: 'mybricks.basic-comlib.text',//模版中的组件namespace
+              deletable: false
+            }
+          ]
+        }
+      },
+      {
+        id: 'main',
+        title: '主页'
+      }
+    ],
+    template: {//默认模版（非必须）
+      coms: [
+        {
+          namespace: 'mybricks.normal-pc.tabs',
+          deletable: false
+        }
+      ]
+    }
+  },
+  //...
+}
+```
+
+#### toplView（V3:交互视图）[非必须]
+结构视图定义了引擎在交互结构构成方面的主体部分：
+```typescript jsx
+const config = {
+  //...
+  toplView: {
+    display:false,//是否显示，可以配置toplView但不显示，这样就可以使用debug功能
+    title: '交互',//标题
+    cards: {
+      main: {//主卡片配置，用于声明global级别的流程定义
+        title: '页面',
+        ioEditable: true,//inputs、outputs是否可编辑
+        _inputs: [//私有inputs 非必须
+          {
+            id: 'test',
+            title: '测试',
+            schema: {
+              type: 'string'
+            }
+          }
+        ],
+        _outputs: [//私有outputs
+          {
+            id: 'test',
+            title: '测试',
+            schema: {
+              type: 'string'
+            }
+          }
+        ]
+      },
+    },
+    vars: {},//是否开启变量
+    fx: {},//是否开启fx功能
+    useStrict: false,//是否开启严格模式，严格模式下将对类型做严格校验
+  },
+  //...
+}
+```
+
