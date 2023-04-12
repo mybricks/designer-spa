@@ -21,7 +21,7 @@ mybricks-SPA引擎的配置包括以下两大部分：
 ### 全局配置
 > 全局配置包括了组件库加载器、文件内容加载器、组件属性扩展等内容
 
-#### 组件库加载器 - comLibLoader
+#### comLibLoader（组件库加载器）
 ```typescript jsx
 const config = {
   //...
@@ -40,7 +40,7 @@ const config = {
 - 组件库加载器必须返回一个Promise对象;
 - 组件库可以是URL地址，也可以是一个本地组件库对象;
 
-#### 文件内容加载器
+#### pageContentLoader（文件内容加载器）
 > Mybricks的各类引擎在（编辑）内容加载、保存等方面，均已文件的形式进行。
 ```typescript jsx
 const config = {
