@@ -5,9 +5,12 @@
 >mybricks-SPA历经了数百次迭代，目前已经服务于几十种业务，包括中后台、门户页面、数据可视化、H5页面、小程序页面、图片编辑等各类应用场景。
 > 
 >
+> 
+## 相关文档
+[引擎配置](./doc-config.md)
 
 ## 特性
-#### 1. 所见即所得的开发体验，同时提供了对AI（chatGPT）的支持及扩展；
+#### 1. 所见即所得的开发体验，同时提供了对AI（chatGPT）的强大支持与扩展；
 ![img_4.png](img_4.png)
 
 #### 2. 强大的布局能力
@@ -20,8 +23,7 @@
 ![img_3.png](img_3.png)
 
 
-## 使用
-> <font color='red'>注意，使用需经过Mybricks组织授权</font>
+## 本地快速使用
 
 ### 1. clone 工程
  > git clone git@github.com:mybricks/designer-spa-demo.git
@@ -42,3 +44,6 @@
 > 
 
 ![img.png](img.png)
+
+> <span style='color:red;font-style:italic'>注意，正式使用需经过Mybricks组织授权。</span>
+
