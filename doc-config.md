@@ -16,7 +16,7 @@
 ```
 
 
-## config部分
+## 引擎配置（config部分）
 如下图，mybricks-SPA支持对以下各视图区域进行配置/定制：<br/>
 <img src="./img_5.png" style="width:500px"/><br/>
 V1:侧边栏视图<br/>
