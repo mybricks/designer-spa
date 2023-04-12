@@ -1,6 +1,6 @@
 import React, {useCallback, useRef} from "react";
 import {message} from "antd";
-import css from "./MyDesigner.less";
+import css from "./App.less";
 
 /**
  * 加载连接器插件
@@ -85,7 +85,7 @@ const config = {
   },
 }
 
-export default function MyDesigner() {
+export default function App() {
   const designerRef = useRef<{ switchActivity, dump, toJSON }>()
 
   /**
@@ -143,7 +143,7 @@ export default function MyDesigner() {
     <>
       <div className={css.show}>
         <div className={css.toolbar}>
-          <div className={css.tt}>&lt;定制您自己的无代码设计解决方案&gt;</div>
+          <div className={css.tt}>&lt;您自己的应用标题&gt;</div>
           <div className={css.btns}>
             {/*<button onClick={switchSlider}>激活连接器插件</button>*/}
           </div>

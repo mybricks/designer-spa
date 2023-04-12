@@ -1,6 +1,6 @@
 import {render} from 'react-dom'
 
-import MyDesigner from "./MyDesigner";
+import App from "./App";
 
 render(
   <MyApp/>, document.querySelector('#root')
@@ -8,6 +8,6 @@ render(
 
 function MyApp() {
   return (
-    <MyDesigner/>
+    <App/>
   )
 }
