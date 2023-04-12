@@ -1,11 +1,13 @@
 # 欢迎使用 mybricks-SPA设计引擎
 
->**mybricks-SPA** 是mybricks引擎家族面向单页应用的企业级设计引擎。
+>**mybricks-SPA** 是mybricks引擎家族面向单页应用的企业级低代码设计引擎。
 > 
 >mybricks-SPA历经了数百次迭代，目前已经服务于几十种业务，包括中后台、门户页面、数据可视化、H5页面、小程序页面、图片编辑等各类应用场景。
 > 
 >
 > 
+
+
 ## 相关文档
 [引擎配置](./doc-config.md)
 
@@ -45,5 +47,4 @@
 
 ![img.png](img.png)
 
-> <span style='color:red;font-style:italic'>注意，正式使用需经过Mybricks组织授权。</span>
 
