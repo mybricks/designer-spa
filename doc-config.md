@@ -116,11 +116,11 @@ const config = {
           return Promise.reject('错误的连接器类型.')
         }
       },
-      events: [//配置事件
+      events: [//扩展除自定义之外的事件
         {
           type: 'jump',
           title: '跳转到',
-          exe({options}) {
+          exe({options}) {//实际执行时的回调
             const page = options.page
             if (page) {
               window.location.href = page
