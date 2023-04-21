@@ -15,7 +15,7 @@ const Designer = window.mybricks.SPADesigner
  */
 const config = {
   plugins: [servicePlugin()],//配置插件
-  comLibLoader() {//配置组件
+  comLibLoader(desc) {//配置组件
     return new Promise<string[]>((resolve, reject) => {
       resolve([`https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/5665_1.1.12/2023-03-31_12-19-17/edit.js`])
       //resolve([testLib])//也可以加载本地组件库

@@ -40,6 +40,26 @@ const config = {
 - 组件库加载器必须返回一个Promise对象;
 - 组件库可以是URL地址，也可以是一个本地组件库对象;
 
+
+#### comLibAdder（组件库添加）[非必须]
+```typescript jsx
+const config = {
+  //...
+  comLibAdder(){
+    //打开选择组件库的对话框
+    //对话框完成后回调：
+    return new Promise((resolve) => {
+      resolve(`组件库edit.js地址`)
+    })
+  }
+  //...
+}
+```
+**注意：**
+- 组件库加载器必须返回一个Promise对象;
+- 组件库可以是URL地址，也可以是一个本地组件库对象;
+
+
 #### pageContentLoader（文件内容加载器）[必须]
 > Mybricks的各类引擎在（编辑）内容加载、保存等方面，均已文件的形式进行。
 ```typescript jsx
