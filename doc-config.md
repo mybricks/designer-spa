@@ -41,7 +41,7 @@ const config = {
 - 组件库可以是URL地址，也可以是一个本地组件库对象;
 
 
-#### comLibLoader（组件库加载器-添加自定义组件库的场景）[必须] 
+#### comLibLoader（组件库加载器-添加自定义组件库的场景）[非必须] 
 ```typescript jsx
 const config = {
   //...
