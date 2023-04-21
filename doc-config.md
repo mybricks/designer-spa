@@ -116,26 +116,26 @@ const config = {
           return Promise.reject('错误的连接器类型.')
         }
       },
-    },
-    events: [//配置事件
-      {
-        type: 'jump',
-        title: '跳转到',
-        exe({options}) {
-          const page = options.page
-          if (page) {
-            window.location.href = page
-          }
+      events: [//配置事件
+        {
+          type: 'jump',
+          title: '跳转到',
+          exe({options}) {
+            const page = options.page
+            if (page) {
+              window.location.href = page
+            }
+          },
+          options: [
+            {
+              id: 'page',
+              title: '页面',
+              editor: 'textarea'
+            }
+          ]
         },
-        options: [
-          {
-            id: 'page',
-            title: '页面',
-            editor: 'textarea'
-          }
-        ]
-      },
-    ]
+      ]
+    }
   },
   //...
 }
