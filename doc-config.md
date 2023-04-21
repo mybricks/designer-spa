@@ -41,6 +41,58 @@ const config = {
 - 组件库可以是URL地址，也可以是一个本地组件库对象;
 
 
+#### comLibLoader（组件库加载器-添加自定义组件库的场景）[必须] 
+```typescript jsx
+const config = {
+  //...
+  comLibLoader(desc) {
+    if (desc) {//desc 中传递必要的命令
+      if (desc.cmd === 'addCom') {//添加组件 或 更新组件、删除组件
+        const selfLib = {
+          comAray: [
+            {
+              id: 'test',
+              title: '测试组件',
+              version: '1.0.1',
+              namespace: 'test.a',
+              runtime() {
+                return (
+                  <div>TODO</div>
+                )
+              }
+            }
+          ],
+          id: desc.libId,
+          title: '我的组件库',
+          defined: true
+        }
+
+        resolve(selfLib)
+
+        return
+      }
+    }
+    
+    const selfLib = {
+      comAray: [
+      ],
+      id: 'my',
+      title: '我的组件库',
+      defined: true//必须，通过此属性标识为自定义组件库
+    }
+    
+    return new Promise<string[]>((resolve, reject) => {
+      resolve([
+        selfLib,
+        `https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/5665_1.1.12/2023-03-31_12-19-17/edit.js`
+      ])
+    })
+  }
+  //...
+}
+```
+
+
 #### comLibAdder（组件库添加）[非必须]
 ```typescript jsx
 const config = {
