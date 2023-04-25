@@ -11,7 +11,8 @@
 
 ## 相关文档
 [mybricks-SPA 引擎配置](./doc-config.md)<br/>
-[编辑器（Editor）与自定义编辑器](./doc-editor.md)
+[编辑器（Editor）与自定义编辑器](./doc-editor.md)<br/>
+[云组件搭建应用](./demos/cloud-component/readme.md)
 
 <br />
 
