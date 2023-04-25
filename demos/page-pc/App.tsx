@@ -6,6 +6,7 @@ import css from "./App.less";
  * 加载连接器插件
  */
 import servicePlugin, {call as callConnectorHttp} from "@mybricks/plugin-connector-http"; //连接器插件和运行时
+import { render} from '@mybricks/render-com'
 import htmlTpt from './pub-tpt.html'
 
 const Designer = window.mybricks.SPADesigner
@@ -45,6 +46,7 @@ const config = {
   toplView: {},//配置交互视图
   com: {//配置组件运行时的环境扩展
     env: {
+      renderCom: render,
       i18n(title) {//多语言
         return title
       },
