@@ -17,23 +17,34 @@
 
 ## 事件监听（on...）部分
 mybricks-SPA引擎的监听包括：
-### 消息监听 onMessage
-> 当引擎内部某些事件发生时，会通过onMessage回调函数向外部发送消息，以便于外部做出相应的处理。
 ```typescript jsx
 <SPADesigner config={config}
              ref={designerRef}
              onMessage={onMessage}
+             onEdit={onEdit}
+             onDebug={onDebug}
 />
 ```
+### 消息监听 onMessage
+> 当引擎内部某些事件发生时，会通过onMessage回调函数向外部发送消息
+
 ```typescript jsx
 import {message} from "antd";
 
 const onMessage = useCallback((type, msg) => {
-message.destroy()//此处使用的是antd的message
-message[type](msg)
+    message.destroy()//此处使用的是antd的message
+    message[type](msg)
 }, [])
 ```
+### 内容变更 onEdit
+> 当引擎中的设计内容发生变更时，会通过onEdit回调函数向外部发送消息
 
+```typescript jsx
+
+const onEdit = useCallback((msg) => {
+  console.log(msg.title)
+}, [])
+```
 
 
 ## 引擎配置（config）部分
