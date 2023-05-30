@@ -11,9 +11,29 @@
 > mybricks-SPA引擎目前提供的是React版本，因此在使用mybricks-SPA引擎之前，需要先了解React的基本使用方法。
 
 ```typescript jsx
-<Designer config={config} ref={designerRef}/>
+<Designer config={config} ref={designerRef} onMessage={onMessage}/>
 //config 引擎配置项，designerRef 引擎实例
 ```
+
+## 事件监听（on...）部分
+mybricks-SPA引擎的监听包括：
+### 消息监听 onMessage
+> 当引擎内部某些事件发生时，会通过onMessage回调函数向外部发送消息，以便于外部做出相应的处理。
+```typescript jsx
+<SPADesigner config={config}
+             ref={designerRef}
+             onMessage={onMessage}
+/>
+```
+```typescript jsx
+import {message} from "antd";
+
+const onMessage = useCallback((type, msg) => {
+message.destroy()//此处使用的是antd的message
+message[type](msg)
+}, [])
+```
+
 
 
 ## 引擎配置（config）部分
