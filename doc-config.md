@@ -337,3 +337,36 @@ const config = {
 }
 ```
 
+#### editView（V5:属性视图）[非必须]
+属性视图定义了引擎在属性编辑方面的配置部分：
+
+```typescript jsx
+const projectData = {}//当前项目的数据，其中保存页面的dump数据等
+const config = {
+  editView: {
+    editorAppender(editConfig) {//【非必须】对编辑器的扩展，该方法可以对已有编辑器进行覆盖
+      if(editConfig.type==='abc'){//如果编辑器是abc类型,则返回自定义编辑器
+        return AbcEditor({editConfig} as any)
+      }
+    },
+    items({}, cate0, cate1, cate2) {//【非必须】对"项目"编辑面板进行声明，支持最多三个Tabs
+      cate0.title = `项目1`//第一个Tab的标题
+      cate0.items = [//编辑项声明
+        {
+          title: '权限方法',
+          type: 'textarea',
+          value: {
+            get() {
+              return projectData.permission
+            },
+            set(context, v: string) {
+              projectData.permission = v
+            }
+          }
+        }
+      ]
+    }
+  }
+}
+```
+
