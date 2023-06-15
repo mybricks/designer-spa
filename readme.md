@@ -2,7 +2,7 @@
 
 >**mybricks-SPA** 是mybricks引擎家族面向页面应用的企业级低代码设计引擎。
 > 
->目前已经服务于几十种业务场景，包括中后台、门户页面、数据可视化、H5页面、小程序页面、图片编辑等。
+>目前已经服务于包括中后台、门户页面、数据可视化、H5页面、小程序页面、图片编辑等多类业务场景。
 > 
 >
 >
@@ -12,7 +12,6 @@
 ## 相关文档
 [mybricks-SPA 引擎配置](/docs/01-config/index.md)<br/>
 [编辑器（Editor）与自定义编辑器](/docs/doc-editor.md)<br/>
-[云组件搭建应用](./demos/cloud-component/readme.md)
 
 <br />
 
@@ -41,7 +40,7 @@
 > npm install
 
 
-### 3. 编译应用，启动服务
+### 3. 启动服务
 > npm run dev
 >
 

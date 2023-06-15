@@ -2,21 +2,26 @@ import React, {useCallback, useRef} from "react";
 import {message} from "antd";
 import css from "./App.less";
 
-/**
- * 加载连接器插件
- */
-import servicePlugin, {call as callConnectorHttp} from "@mybricks/plugin-connector-http"; //连接器插件和运行时
-import { render} from '@mybricks/render-com'
+//加载连接器插件
+import servicePlugin, {call as callConnectorHttp} from "@mybricks/plugin-connector-http";
 import htmlTpt from './pub-tpt.html'
 
+//加载设计器
 const Designer = window.mybricks.SPADesigner
+
+//在../../targets/page-pc.html中通过script标签加载设计器
+
+/**
+ *   <!-- Mybricks-SPA设计引擎 -->
+ *   <script type="text/javascript" src="https://f2.beckwai.com/kos/nlav12333/mybricks/designer-spa/1.2.77/index.min.js"></script>
+ */
 
 /**
  * 配置设计器
  */
 const config = {
   plugins: [servicePlugin()],//配置插件
-  comLibLoader(desc) {//配置组件
+  comLibLoader(desc) {//配置组件加载器
     return new Promise<string[]>((resolve, reject) => {
       resolve([`https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/5665_1.1.12/2023-03-31_12-19-17/edit.js`])
       //resolve([testLib])//也可以加载本地组件库
@@ -46,7 +51,7 @@ const config = {
   toplView: {},//配置交互视图
   com: {//配置组件运行时的环境扩展
     env: {
-      renderCom: render,
+      //renderCom: render,
       i18n(title) {//多语言
         return title
       },
