@@ -36,20 +36,41 @@ const config = {
 
         resolve(pageContent)
       } else {
-        // resolve(null)
+        resolve(null)
         // return
-        import('./demo-data.json').then(data => {
-          pageContent = JSON.parse(JSON.stringify(data))
-          resolve(pageContent)
-        })
+        // import('./demo-data.json').then(data => {
+        //   pageContent = JSON.parse(JSON.stringify(data))
+        //   resolve(pageContent)
+        // })
       }
     })
   },
   geoView: {//配置布局视图
-    nav: {float: false},
+    nav: {float: false},//大纲及组件视图的展现方式
+    scenes: {//多场景【非必选】
+      adder: [
+        {
+          type: 'popup',
+          title: '对话框',
+          template: {
+            namespace: 'mybricks.basic-comlib.popup',
+            deletable: false,
+            asRoot: true
+          }
+        }
+      ]
+    },
   },
-  toplView: {},//配置交互视图
-  com: {//配置组件运行时的环境扩展
+  toplView: {
+    title: '交互',//逻辑交互面板标题
+    cards: {//逻辑卡片
+      main: {
+        title: '页面'
+      },
+    },
+    fx: {},//支持fx
+  },//配置交互视图
+  com: {//配置组件运行时的环境扩展【非必选】
     env: {
       //renderCom: render,
       i18n(title) {//多语言
@@ -70,7 +91,7 @@ const config = {
         }
       },
     },
-    events: [//配置事件
+    events: [//配置事件【非必选】
       {
         type: 'jump',
         title: '跳转到',
@@ -94,6 +115,14 @@ const config = {
 
 export default function App() {
   const designerRef = useRef<{ switchActivity, dump, toJSON }>()
+
+  /**
+   * 处理引擎消息
+   */
+  const onMessage = useCallback((type, msg) => {
+    message.destroy()
+    message[type](msg)
+  }, [])
 
   /**
    * 保存
@@ -159,7 +188,12 @@ export default function App() {
           <button onClick={publish}>发布</button>
         </div>
         <div className={css.designer}>
-          <Designer config={config} ref={designerRef}/>
+          <Designer config={config}
+                    ref={designerRef}
+                    onMessage={onMessage}
+                    onEdit={(...args) => {//当有编辑动作发生
+                      //console.log(args)
+                    }}/>
         </div>
       </div>
     </>
