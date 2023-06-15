@@ -1,8 +1,8 @@
-# 欢迎使用 mybricks-SPA设计引擎
+# 欢迎使用 mybricks-SPA图形化设计引擎
 
->**mybricks-SPA** 是mybricks引擎家族面向单页应用的企业级低代码设计引擎。
+>**mybricks-SPA** 是mybricks引擎家族面向页面应用的企业级低代码设计引擎。
 > 
->mybricks-SPA历经了数百次迭代，目前已经服务于几十种业务，包括中后台、门户页面、数据可视化、H5页面、小程序页面、图片编辑等各类应用场景。
+>目前已经服务于几十种业务场景，包括中后台、门户页面、数据可视化、H5页面、小程序页面、图片编辑等。
 > 
 >
 >
@@ -10,8 +10,8 @@
 <br />
 
 ## 相关文档
-[mybricks-SPA 引擎配置](./doc-config.md)<br/>
-[编辑器（Editor）与自定义编辑器](./doc-editor.md)<br/>
+[mybricks-SPA 引擎配置](/docs/01-config/index.md)<br/>
+[编辑器（Editor）与自定义编辑器](/docs/doc-editor.md)<br/>
 [云组件搭建应用](./demos/cloud-component/readme.md)
 
 <br />
