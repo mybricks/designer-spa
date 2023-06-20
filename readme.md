@@ -10,7 +10,8 @@
 <br />
 
 ## 相关文档
-[mybricks-SPA 引擎配置](/docs/01-config/index.md)<br/>
+[引擎总体配置概述](/docs/01-config/index.md)<br/>
+[配置多场景](/docs/02-config-scenes/index.md)<br/>
 [编辑器（Editor）与自定义编辑器](/docs/doc-editor.md)<br/>
 
 <br />

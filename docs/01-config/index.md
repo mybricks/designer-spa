@@ -1,11 +1,15 @@
 # 引擎配置
 
->**mybricks-SPA** 是mybricks引擎家族面向单页应用的企业级设计引擎。
+>**mybricks-SPA** 是mybricks引擎家族面向各类页面应用场景的可视化建模仿真引擎。
 >
 >本篇文章将介绍如何配置mybricks-SPA引擎，以便于在开发环境中使用。
 >
 
 <br/>
+
+## 相关文档
+[引擎总体配置概述](../docs/02-config-scenes/index.md)<br/>
+
 
 ## 引擎在React中的使用
 > mybricks-SPA引擎目前提供的是React版本，因此在使用mybricks-SPA引擎之前，需要先了解React的基本使用方法。
