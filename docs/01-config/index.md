@@ -1,4 +1,4 @@
-# mybricks-SPA引擎配置
+# 引擎配置
 
 >**mybricks-SPA** 是mybricks引擎家族面向单页应用的企业级设计引擎。
 >
