@@ -12,9 +12,9 @@
 ## 相关文档
 [使用及配置概述](/docs/01-config-overview/index.md)<br/>
 <br/>
-[插件配置](/docs/02-config-plugins/index.md)<br/>
-[内容加载器配置](/docs/03-config-pagecontentloader/index.md)<br/>
-[多场景(画布)配置](/docs/02-config-scenes/index.md)<br/>
+[插件(plugins)配置](/docs/02-config-plugins/index.md)<br/>
+[内容加载器(pageContentLoader)配置](/docs/03-config-pagecontentloader/index.md)<br/>
+[多场景(geoView/scenes)配置](/docs/02-config-scenes/index.md)<br/>
 
 [编辑器（Editor）与自定义编辑器](/docs/doc-editor.md)<br/>
 
