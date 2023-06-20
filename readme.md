@@ -13,6 +13,7 @@
 [使用及配置概述](/docs/01-config-overview/index.md)<br/>
 <br/>
 [插件(plugins)配置](/docs/02-config-plugins/index.md)<br/>
+[组件库加载器(comLibLoader)及添加方式(comLibAdder)配置](/docs/03-config-comlib/index.md)<br/>
 [内容加载器(pageContentLoader)配置](/docs/03-config-pagecontentloader/index.md)<br/>
 [多场景(geoView/scenes)配置](/docs/02-config-scenes/index.md)<br/>
 
