@@ -236,7 +236,7 @@ const config = {
 
 ### 视图配置<br/>
 mybricks-SPA支持对以下各视图区域进行配置/定制,如下图：<br/>
-<img src="./img_5.png" style={{width:810}}/><br/>
+<img src="./img_5.png" style="width:810px"/><br/>
 >V1:侧边栏视图<br/>
 >V2:结构视图<br/>
 >V3:交互视图<br/>
