@@ -7,7 +7,7 @@
 
 
 ## 相关文档
-[引擎总体配置概述](../docs/01-config/index.md)<br/>
+[引擎总体配置概述](../01-config/index.md)<br/>
 
 
 #### geoView 结构视图 中配置使用多场景
