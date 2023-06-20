@@ -92,7 +92,7 @@ const config = {
   
   com:{},//组件环境及扩展
 
-  geoView:{},//配置结构视图
+  geoView:{},//配置布局视图
   toplView:{},//配置交互视图
   editView:{},//配置编辑视图
   
@@ -102,7 +102,7 @@ const config = {
 mybricks-SPA支持对以下各视图区域进行配置/定制,如下图：<br/>
 <img src="./img_5.png" style="width:810px"/><br/>
 >V1:侧边栏视图<br/>
->V2:结构视图(geoView)<br/>
+>V2:布局视图(geoView)<br/>
 >V3:交互视图(toplView)<br/>
 >V4:状态视图<br/>
 >V5:属性视图(editView)<br/>

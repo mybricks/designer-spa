@@ -15,6 +15,12 @@
 [插件(plugins)配置](/docs/02-config-plugins/index.md)<br/>
 [组件库加载器(comLibLoader)及添加方式(comLibAdder)配置](/docs/03-config-comlib/index.md)<br/>
 [内容加载器(pageContentLoader)配置](/docs/03-config-pagecontentloader/index.md)<br/>
+[组件运行环境(com/env)配置](/docs/02-config-com/index.md)<br/>
+[布局视图(geoView)配置](/docs/02-config-geoView/index.md)<br/>
+[交互视图(toplView)配置](/docs/02-config-toplView/index.md)<br/>
+[编辑视图(editView)配置](/docs/02-config-editView/index.md)<br/>
+
+**专题**
 [多场景(geoView/scenes)配置](/docs/02-config-scenes/index.md)<br/>
 
 [编辑器（Editor）与自定义编辑器](/docs/doc-editor.md)<br/>
