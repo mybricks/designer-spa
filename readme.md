@@ -10,7 +10,7 @@
 <br />
 
 ## 相关文档
-[使用及配置概述](/docs/01-config-overview/index.md)<br/>
+[使用及配置概述](/docs/00-config-overview/index.md)<br/>
 <br/>
 [插件(plugins)配置](/docs/02-config-plugins/index.md)<br/>
 [组件库加载器(comLibLoader)及添加方式(comLibAdder)配置](/docs/03-config-comlib/index.md)<br/>
