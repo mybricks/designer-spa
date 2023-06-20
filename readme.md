@@ -20,7 +20,7 @@
 [交互视图(toplView)配置](/docs/02-config-toplView/index.md)<br/>
 [编辑视图(editView)配置](/docs/02-config-editView/index.md)<br/>
 
-**专题**
+**专题**<br/>
 [多场景(geoView/scenes)配置](/docs/02-config-scenes/index.md)<br/>
 
 [编辑器（Editor）与自定义编辑器](/docs/doc-editor.md)<br/>
