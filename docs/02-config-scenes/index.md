@@ -43,6 +43,5 @@ const config = {
 > mybricks.basic-comlib.popup
 > 
 
-关于 mybricks.basic-comlib.popup 组件源码，参考
-[mybricks.basic-comlib.popup](https://github.com/mybricks/comlib-basic/tree/main/src/popup）
+关于 mybricks.basic-comlib.popup，请参考[组件源码](https://github.com/mybricks/comlib-basic/tree/main/src/popup)
 
