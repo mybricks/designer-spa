@@ -10,8 +10,11 @@
 <br />
 
 ## 相关文档
-[引擎总体配置概述](/docs/01-config/index.md)<br/>
-[配置多场景(画布)](/docs/02-config-scenes/index.md)<br/>
+[在页面中的使用及配置概述](/docs/01-config-overview/index.md)<br/>
+[插件配置](/docs/02-config-plugins/index.md)<br/>
+[内容加载器配置](/docs/03-config-pagecontentloader/index.md)<br/>
+[多场景(画布)配置](/docs/02-config-scenes/index.md)<br/>
+
 [编辑器（Editor）与自定义编辑器](/docs/doc-editor.md)<br/>
 
 <br />
