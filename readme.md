@@ -1,4 +1,4 @@
-# 欢迎使用 mybricks-SPA 企业级低代码设计引擎
+# 欢迎使用 mybricks-SPA
 
 >**mybricks-SPA** 是mybricks引擎家族面向页面应用的企业级低代码设计引擎。
 > 
@@ -11,7 +11,7 @@
 
 ## 相关文档
 [引擎总体配置概述](/docs/01-config/index.md)<br/>
-[配置多场景](/docs/02-config-scenes/index.md)<br/>
+[配置多场景(画布)](/docs/02-config-scenes/index.md)<br/>
 [编辑器（Editor）与自定义编辑器](/docs/doc-editor.md)<br/>
 
 <br />
