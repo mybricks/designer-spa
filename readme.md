@@ -12,16 +12,23 @@
 ## 相关文档
 [使用及配置概述](/docs/00-config-overview/index.md)<br/>
 <br/>
-[插件(plugins)配置](/docs/02-config-plugins/index.md)<br/>
-[组件库加载器(comLibLoader)及添加方式(comLibAdder)配置](/docs/03-config-comlib/index.md)<br/>
-[内容加载器(pageContentLoader)配置](/docs/03-config-pagecontentloader/index.md)<br/>
-[组件运行环境(com/env)配置](/docs/02-config-com/index.md)<br/>
-[布局视图(geoView)配置](/docs/02-config-geoView/index.md)<br/>
-[交互视图(toplView)配置](/docs/02-config-toplView/index.md)<br/>
-[编辑视图(editView)配置](/docs/02-config-editView/index.md)<br/>
+**配置专题**<br/>
+[插件(plugins)](/docs/02-config-plugins/index.md)<br/>
+[组件库加载器(comLibLoader)及添加方式(comLibAdder)](/docs/03-config-comlib/index.md)<br/>
+[内容加载器(pageContentLoader)](/docs/03-config-pagecontentloader/index.md)<br/>
+[组件运行环境(com/env)](/docs/02-config-com/index.md)<br/>
+[布局视图(geoView)](/docs/02-config-geoView/index.md)<br/>
+[交互视图(toplView)](/docs/02-config-toplView/index.md)<br/>
+[编辑视图(editView)](/docs/02-config-editView/index.md)<br/>
 
-**专题**<br/>
+**场景专题**<br/>
+画布显示为PC场景<br/>
+画布显示为手机场景<br/>
+去掉交互视图--无代码场景<br/>
+隐藏交互视图<br/>
+扩展及自定义编辑器<br/>
 [多场景(geoView/scenes)配置](/docs/02-config-scenes/index.md)<br/>
+
 
 [编辑器（Editor）与自定义编辑器](/docs/doc-editor.md)<br/>
 
