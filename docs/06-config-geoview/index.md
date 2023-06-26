@@ -5,11 +5,11 @@
 > 通过配置布局视图(geoView)，定义在布局视图区域中的定位方式、多场景等相关内容。
 >
 
-## 相关文档
+### 相关文档
 [使用及总体配置概述](../00-config-overview/index.md)<br/>
 
 
-## 代码示例
+### 代码示例
 
 ```typescript jsx
 const config = {
@@ -23,7 +23,7 @@ const config = {
       editable: true//是否可编辑
     },
     height: 400, //同width
-    scenes: [//是否开启多场景
+    scenes: [//是否开启多场景，支持数组类配置、对象类配置等方式
       {
         id: 'login',//场景id
         title: '登录',//标题
@@ -53,3 +53,6 @@ const config = {
   //...
 }
 ```
+
+### 配置说明
+[多场景详细配置](../00-config-scenes/index.md)<br/>
