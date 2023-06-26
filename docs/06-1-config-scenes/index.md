@@ -1,3 +1,9 @@
+---
+title:Mybricks 布局视图 多场景配置
+description:mybricks-SPA 引擎在页面搭建时支持通过多场景（画布）的方式进行页面搭建，每个场景（画布）都可以独立的进行页面搭建，也可以通过场景（画布）之间的关联进行页面搭建。
+keywords:[Mybricks,Mybricks低代码,低代码,无代码,图形化编程]
+---
+
 # 配置 多场景
 
 > **mybricks-SPA** 是mybricks引擎家族面向各类页面应用场景的企业级低代码设计引擎。
