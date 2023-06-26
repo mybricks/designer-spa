@@ -7,11 +7,11 @@
 
 ![img.png](img.png)
 
-## 相关文档
+#### 相关文档
 [引擎总体配置概述](../01-config/index.md)<br/>
 
 
-#### geoView 结构视图 中配置使用多场景
+### geoView 结构视图 中配置使用多场景
 代码如下：
 ```typescript jsx
 const config = {
@@ -28,6 +28,10 @@ const config = {
             deletable: false,//不可删除
             asRoot: true//作为根组件
           }
+        },
+        {
+          type: 'normal',
+          title: '页面'
         }
       ]
     },
@@ -35,8 +39,8 @@ const config = {
   //...
 }
 ```
-
-#### popup类型的场景
+### 场景的类型
+#### popup
 >popup类型的场景一般用于弹出框，例如对话框、抽屉等。
 >
 > popup场景实际的弹窗交互由模版组件完成，例如上例中配置的
@@ -44,4 +48,7 @@ const config = {
 > 
 
 关于 mybricks.basic-comlib.popup，请参考[组件源码](https://github.com/mybricks/comlib-basic/tree/main/src/popup)
+
+#### normal
+>普通类型的场景
 
