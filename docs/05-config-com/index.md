@@ -1,5 +1,5 @@
 ---
-title: Mybricks-SPA 配置组件的运行环境
+title: 配置 组件的运行环境(com)
 description: 通过配置组件的运行环境，可以扩展组件事件、多语言、连接器运行方式等内容
 keywords: [Mybricks,Mybricks低代码,低代码,无代码,图形化编程]
 sidebar_position: 5

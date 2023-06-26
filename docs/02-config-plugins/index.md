@@ -1,5 +1,5 @@
 ---
-title: Mybricks-SPA 插件配置
+title: 配置 插件(plugins)
 description: 通过配置插件，可以扩展引擎的各项能力
 keywords: [Mybricks,Mybricks低代码,低代码,无代码,图形化编程]
 sidebar_position: 2

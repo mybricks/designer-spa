@@ -1,5 +1,5 @@
 ---
-title: Mybricks-SPA 交互视图配置
+title: 配置 交互视图(toplView)
 description: 通过配置交互视图(toplView)，定义在交互视图区域中的各类卡片、Fx、变量等使用方法
 keywords: [Mybricks,Mybricks低代码,低代码,无代码,图形化编程]
 sidebar_position: 7

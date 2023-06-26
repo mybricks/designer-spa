@@ -1,5 +1,5 @@
 ---
-title: Mybricks-SPA 属性编辑视图配置
+title: 配置 属性编辑视图(editView)
 description: 通过配置编辑视图(editView)，定义在编辑视图中对于编辑器的扩展以及默认的编辑面板
 keywords: [Mybricks,Mybricks低代码,低代码,无代码,图形化编程]
 sidebar_position: 8

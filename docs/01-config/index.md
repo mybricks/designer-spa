@@ -1,5 +1,5 @@
 ---
-title: Mybricks-SPA引擎总体配置
+title: 引擎总体配置
 description: 介绍如何配置mybricks-SPA引擎，以便于在开发环境中使用
 keywords: [Mybricks,Mybricks低代码,低代码,无代码,图形化编程]
 sidebar_position: 1
