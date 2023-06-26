@@ -43,12 +43,9 @@ const config = {
 ### 场景的类型
 #### popup
 >popup类型的场景一般用于弹出框，例如对话框、抽屉等。
->
 > popup场景实际的弹窗交互由模版组件完成，例如上例中配置的
 > mybricks.basic-comlib.popup
-> 
-
-关于 mybricks.basic-comlib.popup，请参考[组件源码](https://github.com/mybricks/comlib-basic/tree/main/src/popup)
+> 关于 mybricks.basic-comlib.popup，请参考[组件源码](https://github.com/mybricks/comlib-basic/tree/main/src/popup)
 
 #### normal
 >普通类型的场景
