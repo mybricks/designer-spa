@@ -1,3 +1,10 @@
+---
+title: Mybricks-SPA 配置组件的运行环境
+description: 通过配置组件的运行环境，可以扩展组件事件、多语言、连接器运行方式等内容
+keywords: [Mybricks,Mybricks低代码,低代码,无代码,图形化编程]
+sidebar_position: 5
+---
+
 # 配置 组件的运行环境
 
 >**mybricks-SPA** 是mybricks引擎家族面向各类页面应用场景的企业级低代码设计引擎。

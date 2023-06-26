@@ -1,3 +1,10 @@
+---
+title: Mybricks-SPA 内容加载器配置
+description: 内容加载器(pageContentLoader）是配置引擎加载编辑内容的入口
+keywords: [Mybricks,Mybricks低代码,低代码,无代码,图形化编程]
+sidebar_position: 3
+---
+
 # 配置 内容加载器
 
 >**mybricks-SPA** 是mybricks引擎家族面向各类页面应用场景的企业级低代码设计引擎。

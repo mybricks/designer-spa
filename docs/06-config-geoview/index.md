@@ -1,3 +1,10 @@
+---
+title: Mybricks-SPA 布局视图配置
+description: 通过配置布局视图(geoView)，定义在布局视图区域中的定位方式、多场景等相关内容
+keywords: [Mybricks,Mybricks低代码,低代码,无代码,图形化编程]
+sidebar_position: 6
+---
+
 # 配置 布局视图
 
 >**mybricks-SPA** 是mybricks引擎家族面向各类页面应用场景的企业级低代码设计引擎。

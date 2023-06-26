@@ -1,4 +1,11 @@
-# 配置 属性视图
+---
+title: Mybricks-SPA 属性编辑视图配置
+description: 通过配置编辑视图(editView)，定义在编辑视图中对于编辑器的扩展以及默认的编辑面板
+keywords: [Mybricks,Mybricks低代码,低代码,无代码,图形化编程]
+sidebar_position: 8
+---
+
+# 配置 属性编辑视图
 
 >**mybricks-SPA** 是mybricks引擎家族面向各类页面应用场景的企业级低代码设计引擎。
 >

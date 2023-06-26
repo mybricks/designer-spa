@@ -1,3 +1,10 @@
+---
+title: Mybricks-SPA引擎总体配置
+description: 介绍如何配置mybricks-SPA引擎，以便于在开发环境中使用
+keywords: [Mybricks,Mybricks低代码,低代码,无代码,图形化编程]
+sidebar_position: 1
+---
+
 # 引擎配置
 
 >**mybricks-SPA** 是mybricks引擎家族面向各类页面应用场景的企业级低代码设计引擎。

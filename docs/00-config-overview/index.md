@@ -1,3 +1,10 @@
+---
+title: Mybricks 使用方法及配置概述
+description: 介绍在前端页面(.jsx或.tsx）中使用mybricks-SPA引擎，以及如何进行配置
+keywords: [Mybricks,Mybricks低代码,低代码,无代码,图形化编程]
+sidebar_position: 0.1
+---
+
 # 使用方法及配置概述
 
 >**mybricks-SPA** 是mybricks引擎家族面向各类页面应用场景的企业级低代码设计引擎。

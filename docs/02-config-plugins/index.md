@@ -1,3 +1,10 @@
+---
+title: Mybricks-SPA 插件配置
+description: 通过配置插件，可以扩展引擎的各项能力
+keywords: [Mybricks,Mybricks低代码,低代码,无代码,图形化编程]
+sidebar_position: 2
+---
+
 # 配置 插件
 
 >**mybricks-SPA** 是mybricks引擎家族面向各类页面应用场景的企业级低代码设计引擎。
