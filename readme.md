@@ -27,7 +27,12 @@
 去掉交互视图--无代码场景<br/>
 隐藏交互视图<br/>
 扩展及自定义编辑器<br/>
-[多场景(geoView/scenes)配置](/docs/02-config-scenes/index.md)<br/>
+[布局视图(geoView)配置](/docs/06-config-geoview/index.md)<br/>
+
+[多场景(geoView/scenes)配置](/docs/06-1-config-scenes/index.md)<br/>
+
+[交互视图(toplView)配置](/docs/07-config-toplview/index.md)<br/>
+[属性视图(editView)配置](/docs/08-config-editview/index.md)<br/>
 
 
 [编辑器（Editor）与自定义编辑器](/docs/doc-editor.md)<br/>

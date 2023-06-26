@@ -55,4 +55,4 @@ const config = {
 ```
 
 ### 相关配置说明
-[多场景详细配置](../02-config-scenes/index.md)<br/>
+[多场景详细配置](../06-1-config-scenes/index.md)<br/>
