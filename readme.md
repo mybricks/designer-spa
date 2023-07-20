@@ -12,6 +12,10 @@
 ## 相关文档
 [使用及配置概述](/docs/00-config-overview/index.md)<br/>
 <br/>
+
+**引擎API**<br/>
+[引擎API](/docs/09-API/index.md)<br/>
+
 **配置专题**<br/>
 [插件(plugins)](/docs/02-config-plugins/index.md)<br/>
 [组件库加载器(comLibLoader)及添加方式(comLibAdder)](/docs/03-config-comlib/index.md)<br/>
