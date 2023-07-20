@@ -16,6 +16,7 @@ sidebar_position: 1
 
 ## 相关文档
 [引擎总体配置概述](../docs/02-config-scenes/index.md)<br/>
+[使用引擎API](../docs/09-API/index.md)<br/>
 
 
 ## 引擎在React中的使用
