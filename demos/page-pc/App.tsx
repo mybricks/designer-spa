@@ -9,6 +9,8 @@ import htmlTpt from './pub-tpt.html'
 //加载设计器
 const Designer = window.mybricks.SPADesigner
 
+//import testLib from './comlib'
+
 //在../../targets/page-pc.html中通过script标签加载设计器
 
 /**

@@ -1,0 +1,22 @@
+.text {
+  width: fit-content;
+  //width: 100%;
+}
+
+.singleLineOverflow {
+  overflow: hidden;
+  /*文本不会换行*/
+  white-space: nowrap;
+  /*当文本溢出包含元素时，以省略号表示超出的文本*/
+  text-overflow: ellipsis;
+}
+
+.multiLineOverflow {
+  overflow: hidden;
+  /*将对象作为弹性伸缩盒子模型显示*/
+  display: -webkit-box;
+  /*设置子元素排列方式*/
+  -webkit-box-orient: vertical;
+  /*设置显示的行数，多出的部分会显示为...*/
+  -webkit-line-clamp: 3;
+}

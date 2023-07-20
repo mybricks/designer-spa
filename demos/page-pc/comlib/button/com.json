@@ -1,0 +1,63 @@
+{
+  "title": "按钮",
+  "namespace": "test.button",
+  "author": "CheMingjun",
+  "author_name": "CheMingjun",
+  "version": "1.0.0",
+  "description": "文字",
+  "data": "./data.json",
+  "runtime": "./runtime.tsx",
+  "editors": "./editors.tsx",
+  "inputs": [
+    {
+      "id": "setContent",
+      "title": "设置内容",
+      "schema": {
+        "type": "string"
+      },
+      "rels": [
+        "setContentFinished"
+      ]
+    },
+    {
+      "id": "getContent",
+      "title": "获取内容",
+      "schema": {
+        "type": "string"
+      },
+      "rels": [
+        "return"
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "click",
+      "title": "点击",
+      "schema": {
+        "type": "string"
+      }
+    },
+    {
+      "id": "dblClick",
+      "title": "双击",
+      "schema": {
+        "type": "string"
+      }
+    },
+    {
+      "id": "return",
+      "title": "返回当前内容",
+      "schema": {
+        "type": "string"
+      }
+    },
+    {
+      "id": "setContentFinished",
+      "title": "设置内容完成",
+      "schema": {
+        "type": "string"
+      }
+    }
+  ]
+}

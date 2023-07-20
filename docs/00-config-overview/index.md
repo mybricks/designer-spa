@@ -5,7 +5,7 @@ keywords: [Mybricks,Mybricks低代码,低代码,无代码,图形化编程]
 sidebar_position: 0.1
 ---
 
-# 使用方法及配置概述
+# 在代码中使用Mybricks-SPA引擎
 
 >**mybricks-SPA** 是mybricks引擎家族面向各类页面应用场景的企业级低代码设计引擎。
 >
@@ -85,6 +85,9 @@ const Designer = window.mybricks.SPADesigner;
 
 ## 引擎实例引用（ref）
 > 通过ref获取引擎对应的实例，从而使用其API完成各类操作。
+
+## 相关文档
+[使用引擎实例完成各类操作](../docs/09-instance-ref/index.md)<br/>
 
 
 ## 引擎配置（config）
