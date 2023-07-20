@@ -83,7 +83,7 @@ const Designer = window.mybricks.SPADesigner;
 />
 ```
 
-## 引用引擎实例API（ref）
+## 引用引擎实例（ref），API访问
 > 通过ref获取引擎对应的实例，从而使用其API完成各类操作。
 
 ## 相关文档
