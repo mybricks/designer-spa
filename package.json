@@ -19,7 +19,7 @@
   "author": "CheMingjun",
   "license": "ISC",
   "dependencies": {
-    "@mybricks/plugin-connector-http": "^1.1.26",
+    "@mybricks/plugin-connector-http": "^1.1.36",
     "@mybricks/plugin-tools": "^1.0.5",
     "antd": "^4.23.6"
   },

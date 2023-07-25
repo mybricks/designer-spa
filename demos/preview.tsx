@@ -5,7 +5,7 @@ import {render} from 'react-dom'
 import {call, mock} from '@mybricks/plugin-connector-http'
 
 
-//准备编译的数据，结构为 {slot,script}，根据 toJSON 导出
+//引擎发布导出的JSON数据，这里是从localStorage中获取
 let json = localStorage.getItem('--preview--')
 
 if (!json) {
@@ -18,6 +18,7 @@ try {
   throw ex
 }
 
+//在window变量上获取渲染器实例
 const {render: renderUI} = window._mybricks_render_web
 
 //----------------------------------------------------------------------------

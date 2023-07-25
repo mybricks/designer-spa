@@ -6,7 +6,7 @@ import css from "./App.less";
 import servicePlugin, {call as callConnectorHttp} from "@mybricks/plugin-connector-http";
 import htmlTpt from './pub-tpt.html'
 
-//加载设计器
+//在window上获取设计器实例
 const Designer = window.mybricks.SPADesigner
 
 //import testLib from './comlib'
@@ -20,12 +20,18 @@ const Designer = window.mybricks.SPADesigner
 
 /**
  * 配置设计器
+ * 文档地址：https://docs.mybricks.world/
  */
 const config = {
   plugins: [servicePlugin()],//配置插件
   comLibLoader(desc) {//配置组件加载器
     return new Promise<string[]>((resolve, reject) => {
-      resolve([`https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/5665_1.1.12/2023-03-31_12-19-17/edit.js`])
+      resolve([
+        //基础组件库（提供了基础的组件，如：文本、形状、JS计算、类型转换等）
+        `https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/7182_1.0.26-main.0/2023-07-18_21-41-33/edit.js`,
+        //PC通用组件库（提供了包括表单容器、表格、卡片等等常用的组件）
+        `https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/7632_1.2.15/2023-07-20_11-14-04/edit.js`
+      ])
       //resolve([testLib])//也可以加载本地组件库
     })
   },
@@ -48,6 +54,7 @@ const config = {
     })
   },
   geoView: {//配置布局视图
+    type: 'pc',//pc或mobile
     nav: {float: false},//大纲及组件视图的展现方式
     scenes: {//多场景【非必选】
       adder: [
@@ -63,7 +70,7 @@ const config = {
       ]
     },
   },
-  toplView: {
+  toplView: {//如果不需要这个面板，可以注释
     title: '交互',//逻辑交互面板标题
     cards: {//逻辑卡片
       main: {
@@ -71,7 +78,7 @@ const config = {
       },
     },
     fx: {},//支持fx
-  },//配置交互视图
+  },
   com: {//配置组件运行时的环境扩展【非必选】
     env: {
       //renderCom: render,
